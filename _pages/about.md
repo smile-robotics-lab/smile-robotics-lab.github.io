@@ -1,80 +1,84 @@
 ---
 layout: about
 permalink: /
-title: "SMILE Robotics Lab @ Clemson"
-subtitle: Soft Modular, Intelligent & Learning Embodied Robotics
-description: "SMILE Lab designs soft & modular robots (SoftSnap, tensegrity blocks) and learning-based control for construction, mobility, and manipulation."
+title: "SMILE Robotics Lab"
+subtitle: "Soft Modular Intelligent Learning Embodied Robotics"
+description: "We design soft and modular robots powered by embodied intelligence and learning."
 
 profile:
   align: right
-  image: luyangzhao.jpg
+  image: hero/smile.gif          # put the file at assets/img/hero/smile.gif
   image_circular: false
-  more_info: >
-    <p>Electrical & Computer Engineering, Clemson University</p>
-    <p>Emerging Innovation Building (EIB) 352</p>
-    <p><a href="mailto:luyangz@clemson.edu">luyangz@clemson.edu</a></p>
-
-news: true
-social: true
-years: [2025, 2024, 2023]
-
+  more_info:
+news: false
+social: false
 ---
 
-<p align="center">
-  <img src="{{ site.baseurl }}/assets/img/hero/smile.gif" alt="SMILE Robotics Lab Banner" style="width:100%; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
-</p>
+<section class="hero-smile">
+  <div class="hero-left">
+    <h1 class="hero-title">SMILE Robotics Lab</h1>
+    <p class="hero-sub"><em>Soft Modular Intelligent Learning Embodied Robotics</em></p>
+    <p class="hero-desc">
+      We develop <strong>soft modular robots</strong> and <strong>embodied AI methods</strong>
+      that enable adaptive, cooperative, and reconfigurable robotic systems.
+    </p>
 
----
+    <p class="hero-links">
+      <a class="btn btn-sm btn-primary" style="background:#F66733;border-color:#F66733"
+         href="/projects/">Research</a>
+      <a class="btn btn-sm btn-outline-secondary" href="/people/">People</a>
+      <a class="btn btn-sm btn-outline-secondary" href="/publications/">Publications</a>
+      <a class="btn btn-sm btn-outline-secondary" href="/join/">Join Us</a>
+      <a class="btn btn-sm btn-outline-secondary" href="https://github.com/smile-robotics-lab" target="_blank">GitHub</a>
+      <a class="btn btn-sm btn-outline-secondary" href="https://youtube.com" target="_blank">YouTube</a>
+    </p>
+  </div>
 
-### Welcome
-The **SMILE (Soft Modular, Intelligent & Learning Embodied) Robotics Lab** at Clemson University develops **soft and modular robotic systems** and **AI-driven design methods** that enable shape adaptation, self-assembly, and multi-agent cooperation in complex environments.
+  <div class="hero-right">
+    <img src="{{ site.baseurl }}/assets/img/hero/smile.gif" alt="SMILE modules forming letters" loading="lazy"/>
+  </div>
+</section>
 
-Our vision is to merge **embodied intelligence**, **modular design**, and **learning control** to build robots that can **adapt, reconfigure, and collaborate**—from aerial modular builders to aquatic morphing structures.
+<style>
+  :root {
+    --accent:#F66733;
+    --text:#111;
+    --muted:#666;
+  }
 
----
-
-### Research Thrusts
-- **Soft & Modular Robotics:** Snap-together **SoftSnap** modules and **Tensegrity Blocks** that morph and reassemble.  
-- **Embodied AI & Learning:** Integrating **LLMs** and **vision-language-action** models for robotic design and control.  
-- **Aerial Modular Construction:** UAV teams performing compliant, perception-in-the-loop assembly.  
-- **Bio-inspired Systems:** Morphing airfoils, dolphin-inspired robots, and compliant manipulators.
-
----
-
-### Open Positions
-We are looking for **motivated PhD, MS, and undergraduate students** excited to build and learn with robots—both hardware and software.  
-If you enjoy working at the intersection of design, fabrication, learning, and perception, email **luyangz@clemson.edu** with the subject line **[Join SMILE Lab]** and include:
-- CV / transcript  
-- 1–2 representative works  
-- A short paragraph about your interests
-
-See more details on the [Join Us](/join/) page.
-
----
-
-### Recent Highlights
-- **Sept 2025** — PI appointed **Associate Editor, ICRA 2026**.  
-- **Aug 2025** — Media coverage: Dartmouth News “Multipurpose Robots Take Shape”, *Interesting Engineering*, *Tech Xplore*, and *ACM Communications*.  
-- **Apr 2025** — Publications in *Nature Communications* and *Soft Robotics* on modular and soft reconfigurable robots.  
-- **Aug 2025** — *IEEE T-Field Robotics*: *SeePerSea Dataset*.  
-- **Ongoing** — Launching SMILE Lab at Clemson University 🎉  
-
----
-
-### Selected Publications
-{% assign papers = "tensegrity_blocks, softsnap, llmswarm, seepersea, morphing_airfoil" | split: "," %}
-{% for pid in papers %}
-  {% bibliography -f papers -q @*[id={{pid}}]* %}
-{% endfor %}
-
----
-
-### Teaching & Outreach
-- **ECE/Robotics courses** in soft/modular robotics and embodied AI.  
-- **Hands-on soft robotics workshops** hosted in the Clemson Library to encourage cross-disciplinary learning.  
-- **Community service:** ICRA 2026 AE, co-organizer of IROS 2023 Tensegrity Workshop, reviewer for *IJRR*, *T-Mech*, *RA-L*, *ICRA*, *IROS*, *RoboSoft*, and *BioRob*.
-
----
-
-### Collaborators & Sponsors
-Clemson ECE • Dartmouth • Houston • Yale • Michigan • UVA • NSF and Industry Partners.
+  .hero-smile {
+    display:grid;
+    grid-template-columns: 1fr minmax(320px,520px);
+    gap:2.5rem;
+    align-items:center;
+    margin-top:1.4rem;
+  }
+  .hero-left { max-width:44rem; }
+  .hero-title {
+    font-weight:800;
+    font-size:2.4rem;
+    line-height:1.1;
+    margin-bottom:0.3rem;
+  }
+  .hero-sub {
+    color:var(--accent);
+    font-size:1.1rem;
+    margin:0 0 1rem 0;
+  }
+  .hero-desc {
+    color:var(--muted);
+    font-size:1.05rem;
+    margin-bottom:1.6rem;
+    max-width:36rem;
+  }
+  .hero-links .btn { margin-right:.4rem; }
+  .hero-right img {
+    width:100%;
+    border-radius:12px;
+    box-shadow:0 8px 28px rgba(0,0,0,.18);
+  }
+  @media (max-width:860px){
+    .hero-smile { grid-template-columns:1fr; }
+    .hero-right { order:-1; margin-bottom:1rem; }
+  }
+</style>
