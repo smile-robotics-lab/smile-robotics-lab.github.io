@@ -8,11 +8,11 @@ permalink: /
     <h1 class="title">SMILE Robotics Lab</h1>
 
     <p class="lead">
-      We design <span class="orange">s</span>oft, 
-      <span class="orange">m</span>odular, 
-      <span class="orange">i</span>ntelligent, 
-      <span class="orange">l</span>earning, and 
-      <span class="orange">e</span>mbodied robotic systems — advancing adaptive,
+      We design <span class="orange">S</span>oft, 
+      <span class="orange">M</span>odular, 
+      <span class="orange">I</span>ntelligent, 
+      <span class="orange">L</span>earning, and 
+      <span class="orange">E</span>mbodied robotic systems — advancing adaptive,
       cooperative, and reconfigurable robots.
     </p>
 
