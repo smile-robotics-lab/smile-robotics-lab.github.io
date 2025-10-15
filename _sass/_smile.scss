@@ -1,0 +1,63 @@
+/* ===== REAL-style split hero for SMILE ===== */
+
+/* 版面：两列布局，左文右图 */
+.real-hero{
+  display: grid;
+  grid-template-columns: minmax(340px, 1fr) minmax(360px, 560px);
+  align-items: center;
+  gap: 3.2rem;
+  margin: 0.6rem 0 2.4rem;
+}
+
+.real-left{ max-width: 48rem; }
+
+/* 标题 & 副标题（解释 SMILE 含义） */
+.real-title{
+  font-weight: 800;
+  font-size: clamp(2.4rem, 6.2vw, 4.2rem);
+  line-height: 1.03;
+  letter-spacing: .2px;
+  margin: 0 0 .35rem 0;
+}
+.real-sub{
+  color:#F66733;          /* 你可以换成想要的强调色 */
+  font-weight:600;
+  font-size:1.1rem;
+  margin:-0.2rem 0 1.0rem 0;
+}
+
+/* 引导段落 & 链接 */
+.real-lead{
+  color:#666;
+  font-size:1.05rem;
+  line-height:1.65;
+  max-width: 40rem;
+  margin:.3rem 0 1.6rem 0;
+}
+.real-links{
+  display:flex; flex-wrap:wrap; gap:1.2rem 1.8rem;
+}
+.real-links a{
+  font-weight:700; color:#222; text-decoration:none;
+}
+.real-links a:hover{ text-decoration:underline; }
+
+/* 右侧图片（有阴影的“漂浮感”） */
+.real-right{ display:flex; justify-content:center; }
+.real-right img{
+  width:100%; max-width:560px;
+  border-radius:12px;               /* 想更像 REAL，可去掉圆角 */
+  filter: drop-shadow(0 18px 42px rgba(0,0,0,.18));
+}
+
+/* 移动端：图在上，文在下 */
+@media (max-width: 960px){
+  .real-hero{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .real-right{ order:-1; }
+}
+
+/* 如果你想把正文整体再上移一点（可按需调值） */
+.real-left{ margin-top: -0.6rem; }
