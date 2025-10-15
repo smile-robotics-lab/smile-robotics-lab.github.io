@@ -1,110 +1,104 @@
+/* --------- Top header bar --------- */
 .site-header {
-    border-bottom: 1px solid $grey-color-light;
-    background-color: #fff;
-    opacity: 0.95;
-    position:fixed;
-    left:0px;
-    top:0px;
-    width:100%;
-    z-index: 50;
+  border-bottom: 1px solid $grey-color-light;
+  background-color: #fff;
+  opacity: 0.95;
+  position: fixed; /* 你原来的设置，保留 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+
+  /* 关键：让容器用 flex 左对齐 */
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 左对齐 */
+    gap: 2rem;
+  }
 }
 
+/* 站点名（如果任何页面都不想显示，直接 display:none;） */
 .site-title {
-    font-size: 20px;
-    line-height: $nav-height;
-    letter-spacing: -1px;
-    margin-bottom: 0;
+  font-size: 20px;
+  line-height: $nav-height;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+
+  /* 首页不显示（可选：如果你在 header.html 已经用 page.url 控制，也可以删掉这段） */
+  body.home & { display: none; }
 }
+
+/* --------- Primary nav --------- */
 .site-nav {
-    float: right;
-    line-height: $nav-height;
+  /* 原来是 float:right; 现在用 flex 左对齐 */
+  float: none;
+  display: flex;
+  align-items: center;
+  line-height: $nav-height;
+  gap: 28px;               /* 桌面端链接间距 */
+  margin-left: 0;
 
-    .nav-trigger {
-        display: none;
+  .nav-trigger { display: none; }
+  .menu-icon  { display: none; }
+
+  .page-link {
+    line-height: $line-height;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    padding: .6rem 0;
+    border-bottom: 2px solid transparent;
+
+    &:hover { color: #111; }
+    &.active { border-bottom-color: #111; } /* 当前页下划线高亮 */
+  }
+
+  /* --- Mobile (保持你的汉堡菜单逻辑) --- */
+  @include media-query($on-palm) {
+    position: absolute;
+    top: 9px;
+    right: $horizontal-spacing-unit / 2;
+    background-color: $background-color;
+    border: 1px solid $grey-color-light;
+    border-radius: 5px;
+    text-align: right;
+
+    .menu-icon { display: block; float: right; width: 36px; height: 26px; line-height: 0; padding-top: 10px; text-align: center;
+      > svg path { fill: $grey-color-dark; }
     }
+    label[for="nav-trigger"] { display: block; float: right; width: 36px; height: 36px; z-index: 2; cursor: pointer; }
 
-    .menu-icon {
-        display: none;
+    /* 隐藏桌面链接，使用 trigger 下拉 */
+    display: block; gap: 0;
+
+    input ~ .trigger { clear: both; display: none; }
+    input:checked ~ .trigger { display: block; padding-bottom: 5px; }
+
+    .page-link {
+      display: block;
+      padding: 5px 10px;
+      margin-left: 10px;
+
+      &:not(:last-child) { margin-right: 0; }
+      &.active { border-bottom-color: transparent; } /* 移动端不显示底线 */
     }
-
-    .page-link{
-        line-height: $line-height;
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 10px;
-        }
-    }
-    // added for hamburger
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $horizontal-spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        label[for="nav-trigger"] {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 36px;
-            z-index: 2;
-            cursor: pointer;
-        }
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg path {
-                fill: $grey-color-dark;
-            }
-        }
-
-        input ~ .trigger {
-            clear: both;
-            display: none;
-        }
-
-        input:checked ~ .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 10px;
-        }
-    }
+  }
 }
 
-.header-bar{
-    border-bottom: 1px solid $light-gray;
-    font-size: 20px;
-    display: block;
-    opacity: 0.75;
-    width: 100%;
-    text-align: center;
-    padding-top: 25px;
-    padding-bottom: $space-4;
-    line-height: 3em;
-    z-index: 25;
-    h1{
-        color: $theme-color;
-        font-size:75px;
-    }
-    h2{
-        font-size:25px;
-    }
+/* 下面这块你原先的“页面大标题条”，如果不用可以保留不变或删除 */
+.header-bar {
+  border-bottom: 1px solid $light-gray;
+  font-size: 20px;
+  display: block;
+  opacity: 0.75;
+  width: 100%;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: $space-4;
+  line-height: 3em;
+  z-index: 25;
+
+  h1 { color: $theme-color; font-size: 75px; }
+  h2 { font-size: 25px; }
 }
