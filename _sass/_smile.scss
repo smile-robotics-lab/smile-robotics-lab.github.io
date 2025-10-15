@@ -1,0 +1,82 @@
+/* ===========================
+   SMILE vertical hero + layout
+   =========================== */
+
+.smile-vertical {
+  display: grid;
+  grid-template-columns: minmax(340px, 1fr) minmax(360px, 560px);
+  gap: 3.2rem;
+  align-items: center;
+  margin-top: 0.6rem;
+}
+
+.smile-left { max-width: 48rem; }
+
+/* Vertical acronym block */
+.smile-letters {
+  display: grid;
+  grid-template-columns: auto 1fr; /* left: big initial, right: small word */
+  gap: 0.2rem 0.6rem;
+  align-items: baseline;
+  margin: 0 0 0.8rem 0;
+}
+.smile-letters .letter {
+  color: #F66733;         /* SMILE initials in orange */
+  font-weight: 800;
+  font-size: 2.8rem;      /* big */
+  line-height: 1.05;
+}
+.smile-letters .word {
+  color: #444;
+  font-size: 1.1rem;      /* small explanations */
+  letter-spacing: 0.3px;
+}
+
+/* Big "Robotics Lab" title */
+.smile-title {
+  font-weight: 800;
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  line-height: 1.05;
+  margin: 1rem 0 1.4rem 0;
+  color: #111;
+}
+
+/* One-sentence mission */
+.smile-lead {
+  color: #666;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 40rem;
+  margin: 0 0 1.6rem 0;
+}
+
+/* Buttons/links line */
+.smile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 1.8rem;
+  a {
+    font-weight: 700;
+    color: #222;
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+}
+
+/* Right hero image */
+.smile-right { display: flex; justify-content: center; }
+.smile-right img {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 12px;
+  filter: drop-shadow(0 18px 42px rgba(0,0,0,.18));
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .smile-vertical { grid-template-columns: 1fr; gap: 2rem; }
+  .smile-right { order: -1; } /* image on top for phones */
+}
+
+/* Optional micro-tweak: pull text a bit up for tighter look */
+.smile-left { margin-top: -0.4rem; }
