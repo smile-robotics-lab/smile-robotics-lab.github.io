@@ -5,7 +5,7 @@ permalink: /
 
 <section class="real-hero">
   <div class="real-left">
-    <h1 class="real-title"> SMILE <span class="fullname">(Soft Modular Intelligent Learning Embodied)</span> Robotics Lab
+    <h1 class="real-title"> SMILE Robotics Lab
     </h1>
     <p class="real-sub">SMILE = <em>Soft Modular Intelligent Learning Embodied</em></p>
 
