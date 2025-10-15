@@ -56,6 +56,14 @@
 /* SMILE colored initials */
 .orange { color: #F66733; font-weight: 800; } /* Clemson-ish orange */
 
+.lab-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
 /* Responsive stack */
 @media (max-width: 960px) {
   .smile-hero { grid-template-columns: 1fr; gap: 2rem; }
