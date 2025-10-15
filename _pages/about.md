@@ -3,27 +3,22 @@ layout: default
 permalink: /
 ---
 
-<section class="smile-full">
-  <div class="smile-left">
-    <h1 class="smile-title">
-      <span class="orange">S</span>oft 
-      <span class="orange">M</span>odular 
-      <span class="orange">I</span>ntelligent 
-      <span class="orange">L</span>earning 
-      <span class="orange">E</span>mbodied 
-      Robotics Lab
-    </h1>
+<section class="smile-hero">
+  <div class="left">
+    <h1 class="title">SMILE Robotics Lab</h1>
 
-    <p class="smile-lead">
-      We design <strong>soft & modular robots</strong> and 
-      <strong>embodied-AI methods</strong> that enable adaptive,
-      cooperative, and reconfigurable robotic systems.
+    <p class="lead">
+      We design <span class="orange">s</span>oft, 
+      <span class="orange">m</span>odular, 
+      <span class="orange">i</span>ntelligent, 
+      <span class="orange">l</span>earning, and 
+      <span class="orange">e</span>mbodied robotic systems — advancing adaptive,
+      cooperative, and reconfigurable robots.
     </p>
 
   </div>
 
-  <div class="smile-right">
-    <img src="{{ site.baseurl }}/assets/img/hero/smile.gif"
-         alt="SMILE modules forming letters" loading="lazy"/>
+  <div class="right">
+    <img src="{{ site.baseurl }}/assets/img/hero/smile.gif" alt="SMILE banner" loading="lazy"/>
   </div>
 </section>
