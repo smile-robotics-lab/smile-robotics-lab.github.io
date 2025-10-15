@@ -56,12 +56,16 @@
 /* SMILE colored initials */
 .orange { color: #F66733; font-weight: 800; } /* Clemson-ish orange */
 
+/* --- Normalize all lab member images (true fixed size) --- */
 .lab-grid img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  width: 200px;               /* same width for everyone */
+  height: 200px;              /* same height */
+  object-fit: cover;          /* crop instead of stretch */
   border-radius: 10px;
+  display: block;
+  margin: 0 auto;             /* center image in its card */
 }
+
 
 
 /* Responsive stack */
