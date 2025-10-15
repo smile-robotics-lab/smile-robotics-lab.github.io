@@ -34,6 +34,15 @@
   max-width: 40rem;
   margin:.3rem 0 1.6rem 0;
 }
+
+.fullname {
+  font-size: 1rem;          /* 小一号 */
+  font-weight: 500;
+  color: #666;              /* 灰一点，和主标题区分 */
+  margin-left: 0.25rem;
+  letter-spacing: 0;
+}
+
 .real-links{
   display:flex; flex-wrap:wrap; gap:1.2rem 1.8rem;
 }
