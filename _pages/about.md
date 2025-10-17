@@ -16,9 +16,14 @@ permalink: /
       cooperative, and reconfigurable robots.
     </p>
 
+
+    <div class="links">
+      <a href="https://github.com/SMILE-Robotics" target="_blank">Github</a>
+      <a href="https://www.youtube.com/@SMILERoboticsLab" target="_blank">Youtube</a>
+    </div>
   </div>
 
   <div class="right">
-    <img src="{{ site.baseurl }}/assets/img/hero/smile.gif" alt="SMILE banner" loading="lazy"/>
+    <img src="{{ site.baseurl }}/assets/img/hero/smile.gif" alt="SMILE Robotics Lab" loading="lazy"/>
   </div>
 </section>
