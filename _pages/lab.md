@@ -47,7 +47,7 @@ permalink: /lab/
 <div class="lab-grid">
   <div class="person-card">
     <img src="{{ site.baseurl }}/assets/img/people/minghaozha.jpg" alt="Minghao Liu">
-    <div class="person-name">Minghao Liu</div>
+    <div class="person-name">Minghao Zha</div>
     <div class="person-role">M.S. Student (from Fall 2025)</div>
   </div>
 </div>
