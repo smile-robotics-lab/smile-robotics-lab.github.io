@@ -5,9 +5,7 @@ permalink: /research/
 description: Research Projects
 ---
 
-
 #### __Main Research Projects__
-
 
 <div class="projects-grid">
 
@@ -20,17 +18,12 @@ description: Research Projects
       </div>
     </div>
     <div class="project-details">
-      <p>
-        <strong>Collaborating Professors:</strong> Rebecca Kramer-Bottiglio (Yale), Kostas Bekris (Rutgers), Xiaonan Huang (UMich), Joran Booth (Yale), Muhao Chen (UKentucky)<br>
-        <strong>Advisor:</strong> Devin Balkcom (Dartmouth)<br>
-      </p>
       <div>
         <strong>Related Papers:</strong>
         <ul>
           <li><a href="assets/documents/papers/Tensegrity-Blocks.pdf" target="_blank">Tensegrity-Blocks: Modular Shape-changing Blocks Enable Self-assembling Robotic Structures</a></li>
           <li><a href="assets/documents/papers/soft1.pdf" target="_blank">Soft Lattice Modules That Behave Independently and Collectively</a></li>
           <li><a href="assets/documents/papers/soft2.pdf" target="_blank">StarBlocks: Soft Actuated Self-Connecting Blocks for Building Deformable Lattice Structures</a></li>
-          
         </ul>
       </div>
       <div>
@@ -53,10 +46,6 @@ description: Research Projects
       </div>
     </div>
     <div class="project-details">
-      <p>
-        <strong>Collaborating Professors:</strong> Muhao Chen (UKentucky), Alberto Quattrini Li (Dartmouth), Haibo Dong (University of Virginia)<br>
-        <strong>Advisor:</strong> Devin Balkcom (Dartmouth)<br>
-      </p>
       <div>
         <strong>Related Papers:</strong>
         <ul>
@@ -81,10 +70,6 @@ description: Research Projects
       </div>
     </div>
     <div class="project-details">
-      <p>
-        <strong>Collaborating Professors:</strong> Muhao Chen (UKentucky)<br>
-        <strong>Advisor:</strong> Devin Balkcom (Dartmouth)<br>
-      </p>
       <div>
         <strong>Related Papers:</strong>
         <ul>
@@ -109,10 +94,6 @@ description: Research Projects
       </div>
     </div>
     <div class="project-details">
-      <p>
-        <strong>Collaborating Professors:</strong> Muhao Chen (UKentucky), Alberto Quattrini Li (Dartmouth), Haibo Dong (University of Virginia)<br>
-        <strong>Advisor:</strong> Devin Balkcom (Dartmouth)<br>
-      </p>
       <div>
         <strong>Related Papers:</strong>
         <ul>
@@ -137,21 +118,11 @@ description: Research Projects
       </div>
     </div>
     <div class="project-details">
-      <p>
-        <strong>Collaborating Professors:</strong> Soroush Vosoughi (Dartmouth), Bo Zhu (Gatech)<br>
-        <strong>Advisor:</strong> Devin Balkcom (Dartmouth)<br>
-      </p>
       <div>
         <strong>Related Papers:</strong>
         <ul>
           <li><a href="assets/documents/papers/learning.pdf" target="_blank">On the Exploration of LM-Based Soft Modular Robot Design</a></li>
         </ul>
-      </div>
-      <div>
-        <!-- <strong>Related Videos:</strong>
-        <ul>
-          <li><a href="https://arxiv.org/pdf/2411.00345" target="_blank">Learning-Based Robot Design Video</a></li>
-        </ul> -->
       </div>
     </div>
   </div>
@@ -165,21 +136,12 @@ description: Research Projects
       </div>
     </div>
     <div class="project-details">
-      <p>
-        <strong>Advisor:</strong> Devin Balkcom (Dartmouth)<br>
-      </p>
       <div>
         <strong>Related Papers:</strong>
         <ul>
           <li><a href="assets/documents/papers/plrc.pdf" target="_blank">PLRC*: A Piecewise Linear Regression Complex for Approximating Optimal Robot Motion</a></li>
           <li><a href="assets/documents/papers/lldm.pdf" target="_blank">LLDM: Locally Linear Distance Maps for Robot Motion Planning</a></li>
         </ul>
-      </div>
-      <div>
-        <!-- <strong>Related Videos:</strong>
-        <ul>
-          <li><a href="https://www.youtube.com/watch?v=dummy_video_1" target="_blank">Motion Planning Video 1</a></li>
-        </ul> -->
       </div>
     </div>
   </div>
@@ -197,5 +159,3 @@ function toggleDetails(element) {
   }
 }
 </script>
-
-
