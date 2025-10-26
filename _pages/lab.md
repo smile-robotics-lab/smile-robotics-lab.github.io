@@ -29,7 +29,7 @@ permalink: /lab/
     <div class="person-name">Yinhong Qin</div>
     <div class="person-role">Ph.D. Student (from Fall 2025)</div>
   </div>
-
+</div>
 
 ### Master’s Students
 <div class="lab-grid">
