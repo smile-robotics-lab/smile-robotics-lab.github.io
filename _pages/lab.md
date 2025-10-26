@@ -52,15 +52,6 @@ permalink: /lab/
   </div>
 </div>
 
-### Undergraduate Students
-<div class="lab-grid">
-  <div class="person-card">
-    <img src="{{ site.baseurl }}/assets/img/people/omar_abdel_azim.jpg" alt="Omar Abdel Azim">
-    <div class="person-name">Omar Abdel Azim</div>
-    <div class="person-role">Undergraduate Researcher (from Fall 2025)</div>
-  </div>
-</div>
-
 ---
 
 ## Alumni (SMILE Lab)
