@@ -54,12 +54,6 @@ permalink: /lab/
 
 ---
 
-## Alumni (SMILE Lab)
-
-- (Add new SMILE Lab alumni here as students graduate)
-
----
-
 ## Alumni (Mentored at Dartmouth Reality & Robotics Lab)
 
 - **Chun-Yi She** — M.S. Student (2023 – 2025)  
