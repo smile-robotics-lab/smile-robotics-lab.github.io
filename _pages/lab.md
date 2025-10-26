@@ -30,18 +30,6 @@ permalink: /lab/
     <div class="person-role">Ph.D. Student (from Fall 2025)</div>
   </div>
 
-  <div class="person-card">
-    <img src="{{ site.baseurl }}/assets/img/people/weizeli.jpg" alt="Weize Li">
-    <div class="person-name">Weize Li</div>
-    <div class="person-role">Ph.D. Student (from Spring 2026)</div>
-  </div>
-
-  <div class="person-card">
-    <img src="{{ site.baseurl }}/assets/img/people/arifurrahman.jpg" alt="Arifur Rahman">
-    <div class="person-name">Arifur Rahman</div>
-    <div class="person-role">Ph.D. Student (from Spring 2026)</div>
-  </div>
-</div>
 
 ### Master’s Students
 <div class="lab-grid">
