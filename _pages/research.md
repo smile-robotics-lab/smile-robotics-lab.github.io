@@ -29,7 +29,7 @@ description: Research Projects
       <div>
         <strong>Related Videos:</strong>
         <ul>
-          <li><a href="https://drive.google.com/file/d/1UQLBAeg2g2nPNQQg4n7eZhJCBn1EARRs/preview" target="_blank">Tensegrity-Blocks Video</a></li>
+          <li><a href="https://www.youtube.com/watch?v=jOUSHgtKf8o" target="_blank">Tensegrity-Blocks Video</a></li>
           <li><a href="https://www.youtube.com/watch?v=EYLYyijfzCg" target="_blank">Soft Lattice Modules Video</a></li>
           <li><a href="https://www.youtube.com/watch?v=xno0FBs3ZdQ" target="_blank">StarBlocks Video</a></li>
         </ul>
