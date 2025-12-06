@@ -21,9 +21,9 @@ description: Research Projects
       <div>
         <strong>Related Papers:</strong>
         <ul>
-          <li><a href="assets/documents/papers/Tensegrity-Blocks.pdf" target="_blank">Tensegrity-Blocks: Modular Shape-changing Blocks Enable Self-assembling Robotic Structures</a></li>
-          <li><a href="assets/documents/papers/soft1.pdf" target="_blank">Soft Lattice Modules That Behave Independently and Collectively</a></li>
-          <li><a href="assets/documents/papers/soft2.pdf" target="_blank">StarBlocks: Soft Actuated Self-Connecting Blocks for Building Deformable Lattice Structures</a></li>
+          <li><a href="/assets/documents/papers/Tensegrity-Blocks.pdf" target="_blank">Tensegrity-Blocks: Modular Shape-changing Blocks Enable Self-assembling Robotic Structures</a></li>
+          <li><a href="/assets/documents/papers/soft1.pdf" target="_blank">Soft Lattice Modules That Behave Independently and Collectively</a></li>
+          <li><a href="/assets/documents/papers/soft2.pdf" target="_blank">StarBlocks: Soft Actuated Self-Connecting Blocks for Building Deformable Lattice Structures</a></li>
         </ul>
       </div>
       <div>
