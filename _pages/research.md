@@ -21,7 +21,7 @@ description: Research Projects
       <div>
         <strong>Related Papers:</strong>
         <ul>
-          <li><a href="/assets/documents/papers/Tensegrity-Blocks.pdf" target="_blank">Tensegrity-Blocks: Modular Shape-changing Blocks Enable Self-assembling Robotic Structures</a></li>
+          <li><a href="/assets/documents/papers/Tensegrity-Blocks.pdf" target="_blank">Modular Shape-changing Tensegrity-Blocks Enable Self-assembling Robotic Structures</a></li>
           <li><a href="/assets/documents/papers/soft1.pdf" target="_blank">Soft Lattice Modules That Behave Independently and Collectively</a></li>
           <li><a href="/assets/documents/papers/soft2.pdf" target="_blank">StarBlocks: Soft Actuated Self-Connecting Blocks for Building Deformable Lattice Structures</a></li>
         </ul>
@@ -49,7 +49,7 @@ description: Research Projects
       <div>
         <strong>Related Papers:</strong>
         <ul>
-          <li><a href="assets/documents/papers/dolphin.pdf" target="_blank">An Untethered Bioinspired Robotic Tensegrity Dolphin with Multi-Flexibility Design for Aquatic Locomotion</a></li>
+          <li><a href="/assets/documents/papers/dolphin.pdf" target="_blank">An Untethered Bioinspired Robotic Tensegrity Dolphin with Multi-Flexibility Design for Aquatic Locomotion</a></li>
         </ul>
       </div>
       <div>
@@ -73,7 +73,7 @@ description: Research Projects
       <div>
         <strong>Related Papers:</strong>
         <ul>
-          <li><a href="assets/documents/papers/softsnap.pdf" target="_blank">SoftSnap: Rapid Prototyping of Untethered Soft Robots Using Snap-Together Modules</a></li>
+          <li><a href="/assets/documents/papers/softsnap.pdf" target="_blank">SoftSnap: Rapid Prototyping of Untethered Soft Robots Using Snap-Together Modules</a></li>
         </ul>
       </div>
       <div>
@@ -97,7 +97,7 @@ description: Research Projects
       <div>
         <strong>Related Papers:</strong>
         <ul>
-          <li><a href="assets/documents/papers/SoftRaft.pdf" target="_blank">SoftRafts: Floating and Adaptive Soft Modular Robots</a></li>
+          <li><a href="/assets/documents/papers/SoftRaft.pdf" target="_blank">SoftRafts: Floating and Adaptive Soft Modular Robots</a></li>
         </ul>
       </div>
       <div>
@@ -121,7 +121,7 @@ description: Research Projects
       <div>
         <strong>Related Papers:</strong>
         <ul>
-          <li><a href="assets/documents/papers/learning.pdf" target="_blank">On the Exploration of LM-Based Soft Modular Robot Design</a></li>
+          <li><a href="/assets/documents/papers/learning.pdf" target="_blank">On the Exploration of LM-Based Soft Modular Robot Design</a></li>
         </ul>
       </div>
     </div>
@@ -139,8 +139,8 @@ description: Research Projects
       <div>
         <strong>Related Papers:</strong>
         <ul>
-          <li><a href="assets/documents/papers/plrc.pdf" target="_blank">PLRC*: A Piecewise Linear Regression Complex for Approximating Optimal Robot Motion</a></li>
-          <li><a href="assets/documents/papers/lldm.pdf" target="_blank">LLDM: Locally Linear Distance Maps for Robot Motion Planning</a></li>
+          <li><a href="/assets/documents/papers/plrc.pdf" target="_blank">PLRC*: A Piecewise Linear Regression Complex for Approximating Optimal Robot Motion</a></li>
+          <li><a href="/assets/documents/papers/lldm.pdf" target="_blank">LLDM: Locally Linear Distance Maps for Robot Motion Planning</a></li>
         </ul>
       </div>
     </div>
