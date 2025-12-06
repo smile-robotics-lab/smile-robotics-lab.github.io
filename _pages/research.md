@@ -79,7 +79,7 @@ description: Research Projects
       <div>
         <strong>Related Videos:</strong>
         <ul>
-          <li><a href="https://www.youtube.com/watch?v=SWuYzo7xSno" target="_blank">SoftSnap Modules Video</a></li>
+          <li><a href="https://www.youtube.com/watch?v=Esyzsk5-VEg" target="_blank">SoftSnap Modules Video</a></li>
         </ul>
       </div>
     </div>
