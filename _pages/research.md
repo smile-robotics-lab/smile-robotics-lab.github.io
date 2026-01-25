@@ -2,7 +2,6 @@
 layout: page
 title: Research
 permalink: /research/
-description: Research Projects
 ---
 <style>
   header.post-header { display: none; }
@@ -106,7 +105,7 @@ description: Research Projects
       <div>
         <strong>Related Videos:</strong>
         <ul>
-          <li><a href="https://drive.google.com/file/d/1fY3anskQE_okj0axE6tPutMyHkgNZe5w/preview" target="_blank">SoftRafts Video</a></li>
+          <li><a href="https://www.youtube.com/watch?v=L9Rf5gL8sXc" target="_blank">SoftRafts Video</a></li>
         </ul>
       </div>
     </div>
