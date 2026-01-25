@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ""
+title: "Lab"
 permalink: /lab/
 ---
 
@@ -46,6 +46,25 @@ permalink: /lab/
     <span>M.S. Student <br>(Fall 2025 - Present)</span>
   </div>
 </div>
+
+#### Undergraduate Students
+
+**Soft Robot Hand Design Group**
+* **Andry Janluca Aguero**
+* **Colton Barry**
+* **Gina Evelyn Bertotti**
+* **Jacob Wayne Brinson**
+* **Caleb Z Kim**
+* **Adalene P King**
+* **Anish Kulkarni**
+* **Liam Leo Loughead**
+* **SrikarNag Nallam**
+* **Kirsten Clement Reed**
+* **Lucaya Robertson**
+* **Alby Schirippa**
+* **Alex Tabaku**
+* **Jorge Y Valdez Reyna**
+
 
 
 ---
