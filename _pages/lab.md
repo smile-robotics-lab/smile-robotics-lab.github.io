@@ -7,7 +7,7 @@ permalink: /lab/
 ## Faculty
 
 <div class="lab-grid">
-  <div class="person-card">
+  <div class="lab-member">
     <img src="{{ site.baseurl }}/assets/img/people/luyangzhao.jpg" alt="Luyang Zhao">
     <div class="person-name">Luyang Zhao</div>
     <div class="person-role">PI / Assistant Professor</div>
@@ -24,7 +24,7 @@ permalink: /lab/
 
 ### Ph.D. Students
 <div class="lab-grid">
-  <div class="person-card">
+  <div class="lab-member">
     <img src="{{ site.baseurl }}/assets/img/people/yinhongqin.jpg" alt="Yinhong Qin">
     <div class="person-name">Yinhong Qin</div>
     <div class="person-role">Ph.D. Student (from Fall 2025)</div>
@@ -33,7 +33,7 @@ permalink: /lab/
 
 ### Master’s Students
 <div class="lab-grid">
-  <div class="person-card">
+  <div class="lab-member">
     <img src="{{ site.baseurl }}/assets/img/people/minghaozha.jpg" alt="Minghao Liu">
     <div class="person-name">Minghao Zha</div>
     <div class="person-role">M.S. Student (from Fall 2025)</div>

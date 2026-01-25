@@ -56,20 +56,44 @@
 /* SMILE colored initials */
 .orange { color: #F66733; font-weight: 800; } /* Clemson-ish orange */
 
-/* --- Normalize all lab member images (true fixed size) --- */
-.lab-grid img {
-  width: 200px;               /* same width for everyone */
-  height: 200px;              /* same height */
-  object-fit: cover;          /* crop instead of stretch */
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto;             /* center image in its card */
+/* ===========================
+   Lab Members Grid Layout
+   =========================== */
+
+/* 1. 网格容器：自动排列，不用写 col-sm-3 这种死代码 */
+.lab-grid {
+  display: grid;
+  /* 每一列最小 180px，剩下的空间自动填满 */
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 2rem;       /* 图片之间的间距 */
+  margin-top: 2rem;
 }
 
+/* 2. 每个人的卡片：文字居中 */
+.lab-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
+/* 3. 图片样式：统一大小，圆形或圆角 */
+.lab-member img {
+  width: 150px;           /* 头像宽度 */
+  height: 150px;          /* 头像高度 */
+  object-fit: cover;      /* 关键！防止图片被拉伸变形 */
+  border-radius: 50%;     /* 50% 是圆形，10px 是圆角方形 */
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 加一点阴影更有质感 */
+}
 
-/* Responsive stack */
-@media (max-width: 960px) {
-  .smile-hero { grid-template-columns: 1fr; gap: 2rem; }
-  .smile-hero .right { order: -1; } /* image on top for phones */
+/* 4. 名字和头衔微调 */
+.lab-member strong {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  display: block;
+}
+.lab-member span {
+  font-size: 0.9rem;
+  color: #666;
 }
