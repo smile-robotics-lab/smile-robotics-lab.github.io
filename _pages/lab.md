@@ -29,7 +29,7 @@ permalink: /lab/
       <img src="/assets/img/people/yinhongqin.jpg" alt="Yinhong Qin">
       <strong>Yinhong Qin</strong>
     </a>
-    <span>Ph.D. Student  (Fall 2025 - Now)</span>
+    <span>Ph.D. Student <br>(Fall 2025 - Present) </span>
   </div>
   
   </div>
@@ -43,7 +43,7 @@ permalink: /lab/
       <img src="/assets/img/people/minghaozha.jpg" alt="Minghao Zha">
       <strong>Minghao Zha</strong>
     </div>
-    <span>M.S. Student</span>
+    <span>M.S. Student <br>(Fall 2025 - Present)</span>
   </div>
 </div>
 
