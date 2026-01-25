@@ -134,3 +134,15 @@
   text-transform: uppercase; /* 全大写，显得正式 */
   letter-spacing: 0.5px;
 }
+
+
+/* ===========================
+   Fix H4 Boldness
+   =========================== */
+
+h4 {
+  font-weight: 700 !important; /* 700 就是加粗 (Bold) */
+  color: #000;                 /* 确保颜色是纯黑，看起来更显粗 */
+  margin-top: 1.5rem;          /* 稍微离上面远一点 */
+  margin-bottom: 0.8rem;       /* 稍微离下面内容近一点 */
+}
