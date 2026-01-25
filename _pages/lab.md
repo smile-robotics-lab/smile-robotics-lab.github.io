@@ -18,9 +18,6 @@ permalink: /lab/
 </div>
 
 
-
----
-
 #### Ph.D. Students
 
 <div class="lab-grid">
