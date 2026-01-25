@@ -4,7 +4,7 @@ title: ""
 permalink: /lab/
 ---
 
-### Faculty
+#### Faculty
 
 
 <div class="lab-grid">
@@ -21,7 +21,7 @@ permalink: /lab/
 
 ---
 
-### Ph.D. Students
+#### Ph.D. Students
 
 <div class="lab-grid">
   <div class="lab-member">
@@ -35,7 +35,7 @@ permalink: /lab/
   </div>
 
 
-### Master's Students
+#### Master's Students
 
 <div class="lab-grid">
   <div class="lab-member">
@@ -50,7 +50,7 @@ permalink: /lab/
 
 ---
 
-### Alumni (Mentored at Dartmouth Reality & Robotics Lab)
+#### Alumni (Mentored at Dartmouth Reality & Robotics Lab)
 
 - **Chun-Yi She** — M.S. Student (2023 – 2025)  
 - **Yitao Jiang** — M.S. Student (2022 – 2025), Now Ph.D. Student at Dartmouth  
