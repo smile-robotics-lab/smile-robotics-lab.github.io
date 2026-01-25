@@ -4,6 +4,9 @@ title: Research
 permalink: /research/
 description: Research Projects
 ---
+<style>
+  header.post-header { display: none; }
+</style>
 
 #### __Main Research Projects__
 
