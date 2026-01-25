@@ -1,22 +1,24 @@
 ---
 layout: page
-title: "Lab"
+title: ""
 permalink: /lab/
 ---
 
 ## Faculty
 
+## Faculty
+
 <div class="lab-grid">
   <div class="lab-member">
-    <img src="{{ site.baseurl }}/assets/img/people/luyangzhao.jpg" alt="Luyang Zhao">
-    <div class="person-name">Luyang Zhao</div>
-    <div class="person-role">PI / Assistant Professor</div>
-    <div class="person-links">
-      <a href="mailto:luyangz@clemson.edu">Email</a>
-      <a href="https://luyangzhao.github.io" target="_blank">Website</a>
-    </div>
+    <a href="https://luyangzhao.github.io/">
+      <img src="/assets/img/people/luyangzhao.jpg" alt="Luyang Zhao">
+      <strong>Luyang Zhao</strong>
+    </a>
+    <span>PI / Assistant Professor</span>
   </div>
 </div>
+
+
 
 ---
 
@@ -27,18 +29,38 @@ permalink: /lab/
   <div class="lab-member">
     <img src="{{ site.baseurl }}/assets/img/people/yinhongqin.jpg" alt="Yinhong Qin">
     <div class="person-name">Yinhong Qin</div>
-    <div class="person-role">Ph.D. Student (from Fall 2025)</div>
+    <div class="person-role">Ph.D. Student </div>
   </div>
 </div>
 
-### Master’s Students
+
+
+## Ph.D. Students
+
 <div class="lab-grid">
   <div class="lab-member">
-    <img src="{{ site.baseurl }}/assets/img/people/minghaozha.jpg" alt="Minghao Liu">
-    <div class="person-name">Minghao Zha</div>
-    <div class="person-role">M.S. Student (from Fall 2025)</div>
+    <a href="https://www.linkedin.com/in/yinhongqin980827/">
+      <img src="/assets/img/people/yinhongqin.jpg" alt="Yinhong Qin">
+      <strong>Yinhong Qin</strong>
+    </a>
+    <span>Ph.D. Student (Fall 2025 - Now)</span>
+  </div>
+  
+  </div>
+
+
+## Master's Students
+
+<div class="lab-grid">
+  <div class="lab-member">
+    <div>
+      <img src="/assets/img/people/minghaozha.jpg" alt="Minghao Zha">
+      <strong>Minghao Zha</strong>
+    </div>
+    <span>M.S. Student</span>
   </div>
 </div>
+
 
 ---
 

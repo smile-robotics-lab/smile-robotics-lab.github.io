@@ -57,43 +57,80 @@
 .orange { color: #F66733; font-weight: 800; } /* Clemson-ish orange */
 
 /* ===========================
-   Lab Members Grid Layout
+   Lab Members Grid Layout 
    =========================== */
 
-/* 1. 网格容器：自动排列，不用写 col-sm-3 这种死代码 */
+/* 1. 网格容器 */
 .lab-grid {
   display: grid;
-  /* 每一列最小 180px，剩下的空间自动填满 */
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 2rem;       /* 图片之间的间距 */
+  /* 列宽自适应：最小160px，空间够了自动加列 */
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 2.5rem 1.5rem; /* 行距大一点，列距小一点 */
   margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
-/* 2. 每个人的卡片：文字居中 */
+/* 2. 单个成员卡片 */
 .lab-member {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: relative;
 }
 
-/* 3. 图片样式：统一大小，圆形或圆角 */
+/* --- 链接与交互样式 --- */
+.lab-member a {
+  text-decoration: none;   /* 去掉默认蓝色下划线 */
+  color: inherit;          /* 继承黑色 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* 鼠标悬停时的效果 */
+.lab-member a:hover img {
+  opacity: 0.95;
+  transform: scale(1.02);  /* 图片轻微放大 */
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.lab-member a:hover strong {
+  color: #F66733;          /* 名字变橙色 */
+  transition: color 0.2s;
+}
+
+/* --- 图片样式 --- */
 .lab-member img {
-  width: 150px;           /* 头像宽度 */
-  height: 150px;          /* 头像高度 */
-  object-fit: cover;      /* 关键！防止图片被拉伸变形 */
-  border-radius: 50%;     /* 50% 是圆形，10px 是圆角方形 */
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 加一点阴影更有质感 */
+  width: 100%;
+  max-width: 180px;
+  height: 180px;          /* 强制正方形 */
+  object-fit: cover;      /* 裁剪不拉伸 */
+  object-position: top;   /* 优先显示头部 */
+  border-radius: 12px;    
+  margin-bottom: 0.8rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
 }
 
-/* 4. 名字和头衔微调 */
+/* --- 文字样式 --- */
 .lab-member strong {
-  font-size: 1.1rem;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;     /* 名字字号 */
+  color: #222;
+  line-height: 1.2;
   margin-bottom: 0.2rem;
   display: block;
 }
+
 .lab-member span {
-  font-size: 0.9rem;
-  color: #666;
+  font-family: sans-serif;
+  font-size: 0.8rem;      /* 头衔字号很小 */
+  color: #777;            /* 灰色 */
+  font-weight: 400;
+  text-transform: uppercase; /* 全大写，显得正式 */
+  letter-spacing: 0.5px;
 }
