@@ -2,7 +2,13 @@
 layout: page
 title: "Lab"
 permalink: /lab/
+nav: true            # 如果你有这个设置的话
+nav_order: 2         # 如果你有这个设置的话
 ---
+
+<style>
+  header.post-header { display: none; }
+</style>
 
 #### Faculty
 
