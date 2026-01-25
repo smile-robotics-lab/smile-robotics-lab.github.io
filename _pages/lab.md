@@ -66,6 +66,15 @@ permalink: /lab/
 * **Jorge Y Valdez Reyna**
 
 
+**LLM-Driven Robotics Group**
+* **Ben Bedingfield**
+* **Clejah Nathello Daniel**
+* **Austin C Hill**
+* **Caleb Z Kim**
+* **Ethan Hayden M Mago**
+* **Ethan Patrick Santee**
+* **Alex Tabaku**
+
 
 ---
 
