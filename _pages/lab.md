@@ -4,9 +4,8 @@ title: ""
 permalink: /lab/
 ---
 
-## Faculty
+### Faculty
 
-## Faculty
 
 <div class="lab-grid">
   <div class="lab-member">
@@ -22,20 +21,7 @@ permalink: /lab/
 
 ---
 
-## Members
-
 ### Ph.D. Students
-<div class="lab-grid">
-  <div class="lab-member">
-    <img src="{{ site.baseurl }}/assets/img/people/yinhongqin.jpg" alt="Yinhong Qin">
-    <div class="person-name">Yinhong Qin</div>
-    <div class="person-role">Ph.D. Student </div>
-  </div>
-</div>
-
-
-
-## Ph.D. Students
 
 <div class="lab-grid">
   <div class="lab-member">
@@ -43,13 +29,13 @@ permalink: /lab/
       <img src="/assets/img/people/yinhongqin.jpg" alt="Yinhong Qin">
       <strong>Yinhong Qin</strong>
     </a>
-    <span>Ph.D. Student (Fall 2025 - Now)</span>
+    <span>Ph.D. Student  (Fall 2025 - Now)</span>
   </div>
   
   </div>
 
 
-## Master's Students
+### Master's Students
 
 <div class="lab-grid">
   <div class="lab-member">
@@ -64,7 +50,7 @@ permalink: /lab/
 
 ---
 
-## Alumni (Mentored at Dartmouth Reality & Robotics Lab)
+### Alumni (Mentored at Dartmouth Reality & Robotics Lab)
 
 - **Chun-Yi She** — M.S. Student (2023 – 2025)  
 - **Yitao Jiang** — M.S. Student (2022 – 2025), Now Ph.D. Student at Dartmouth  
