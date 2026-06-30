@@ -15,7 +15,6 @@ nav_order: 2         # 如果你有这个设置的话
   <img src="/assets/img/lab/creative-inquiry-spring-2026-1.jpg" alt="Creative Inquiry showcase group photo">
   <img src="/assets/img/lab/creative-inquiry-spring-2026-2.jpg" alt="Creative Inquiry project team photo">
   <img src="/assets/img/lab/creative-inquiry-spring-2026-3.jpg" alt="Creative Inquiry presentation photo">
-  <img src="/assets/img/lab/creative-inquiry-spring-2026-4.jpg" alt="Soft robotic hand team photo">
 </div>
 
 <script>
