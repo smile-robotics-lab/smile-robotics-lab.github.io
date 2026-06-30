@@ -10,6 +10,27 @@ nav_order: 2         # 如果你有这个设置的话
   header.post-header { display: none; }
 </style>
 
+<div class="lab-photo-carousel" aria-label="SMILE Robotics Lab photos">
+  <img class="is-active" src="/assets/img/lab/lab-group-spring-2026.jpg" alt="SMILE Robotics Lab group photo">
+  <img src="/assets/img/lab/creative-inquiry-spring-2026-1.jpg" alt="Creative Inquiry showcase group photo">
+  <img src="/assets/img/lab/creative-inquiry-spring-2026-2.jpg" alt="Creative Inquiry project team photo">
+  <img src="/assets/img/lab/creative-inquiry-spring-2026-3.jpg" alt="Creative Inquiry presentation photo">
+  <img src="/assets/img/lab/creative-inquiry-spring-2026-4.jpg" alt="Soft robotic hand team photo">
+</div>
+
+<script>
+  (function () {
+    var slides = document.querySelectorAll('.lab-photo-carousel img');
+    if (slides.length <= 1) return;
+    var index = 0;
+    setInterval(function () {
+      slides[index].classList.remove('is-active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('is-active');
+    }, 4500);
+  })();
+</script>
+
 #### Faculty
 
 <div class="lab-grid">
@@ -23,7 +44,7 @@ nav_order: 2         # 如果你有这个设置的话
 </div>
 
 
-#### Ph.D. Students
+#### Members
 
 <div class="lab-grid">
   <div class="lab-member">
@@ -49,18 +70,13 @@ nav_order: 2         # 如果你有这个设置的话
     </div>
     <span>Incoming Ph.D. Student <br>(Starting Fall 2026)</span>
   </div>
-</div>
 
-
-#### Master's Students
-
-<div class="lab-grid">
   <div class="lab-member">
     <div class="member-main">
       <img src="/assets/img/people/minghaozha.jpg" alt="Minghao Zha">
       <strong>Minghao Zha</strong>
     </div>
-    <span>M.S. Student / Research Assistant <br>Thesis: Fall 2025 - May 2026 <br>RA: May 2026 - Present</span>
+    <span>M.S. Student <br>Thesis: Fall 2025 - May 2026 <br>RA: May 2026 - Present</span>
   </div>
 
   <div class="lab-member">
@@ -68,19 +84,15 @@ nav_order: 2         # 如果你有这个设置的话
       <img src="/assets/img/people/nicholas-burns.jpg" alt="Nicholas R. Burns">
       <strong>Nicholas R. Burns</strong>
     </div>
-    <span>M.S. Student / Research Assistant <br>(May 2026 - Present)</span>
+    <span>M.S. Student <br>(May 2026 - Present)</span>
   </div>
-</div>
 
-#### Undergraduate Research Assistants
-
-<div class="lab-grid">
   <div class="lab-member">
     <div class="member-main">
       <img src="/assets/img/people/alex-tabaku.jpg" alt="Alex Tabaku">
       <strong>Alex Tabaku</strong>
     </div>
-    <span>Undergraduate RA <br>(May 2026 - Present)</span>
+    <span>Undergraduate Student <br>(May 2026 - Present)</span>
   </div>
 
   <div class="lab-member">
@@ -88,7 +100,7 @@ nav_order: 2         # 如果你有这个设置的话
       <img src="/assets/img/people/bryson-still.jpg" alt="Bryson Mathew Still">
       <strong>Bryson Mathew Still</strong>
     </div>
-    <span>Undergraduate RA <br>(May 2026 - Present)</span>
+    <span>Undergraduate Student <br>(May 2026 - Present)</span>
   </div>
 
   <div class="lab-member">
@@ -96,7 +108,7 @@ nav_order: 2         # 如果你有这个设置的话
       <img src="/assets/img/people/clejah-daniel.jpg" alt="Clejah Nathello Daniel">
       <strong>Clejah Nathello Daniel</strong>
     </div>
-    <span>Undergraduate RA <br>(May 2026 - Present)</span>
+    <span>Undergraduate Student <br>(May 2026 - Present)</span>
   </div>
 
   <div class="lab-member">
@@ -104,16 +116,16 @@ nav_order: 2         # 如果你有这个设置的话
       <img src="/assets/img/people/liam-loughead.jpg" alt="Liam Leo Loughead">
       <strong>Liam Leo Loughead</strong>
     </div>
-    <span>Undergraduate RA <br>(May 2026 - Present)</span>
+    <span>Undergraduate Student <br>(May 2026 - Present)</span>
   </div>
 </div>
 
-#### Creative Inquiry Students
+#### Creative Inquiry Teams
 
 <div class="lab-list-grid">
   <div class="lab-list">
     <h5>Soft Modular Robotic Hand</h5>
-    <span>Spring 2026</span>
+    <span>Spring 2026 (Jan-Apr)</span>
     <ul>
       <li>Andry Janluca Aguero</li>
       <li>Colton Barry</li>
@@ -134,7 +146,7 @@ nav_order: 2         # 如果你有这个设置的话
 
   <div class="lab-list">
     <h5>LLM-Driven Robotics</h5>
-    <span>Spring 2026</span>
+    <span>Spring 2026 (Jan-Apr)</span>
     <ul>
       <li>Ben Bedingfield</li>
       <li>Clejah Nathello Daniel</li>

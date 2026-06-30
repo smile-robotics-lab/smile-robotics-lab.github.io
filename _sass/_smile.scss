@@ -60,6 +60,37 @@
    Lab Members Grid Layout 
    =========================== */
 
+.lab-photo-carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 440px;
+  overflow: hidden;
+  margin: 0.5rem 0 3rem 0;
+  background: #f3f5f6;
+}
+
+.lab-photo-carousel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 900ms ease;
+}
+
+.lab-photo-carousel img.is-active {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lab-photo-carousel img {
+    transition: none;
+  }
+}
+
 /* 1. 网格容器 */
 .lab-grid {
   display: grid;
@@ -186,6 +217,11 @@
 }
 
 @media (max-width: 640px) {
+  .lab-photo-carousel {
+    aspect-ratio: 4 / 3;
+    margin-bottom: 2.25rem;
+  }
+
   .lab-grid {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 2rem 1rem;
