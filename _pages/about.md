@@ -18,7 +18,7 @@ permalink: /
 
 
     <div class="links">
-      <a href="https://github.com/SMILE-Robotics" target="_blank">Github</a>
+      <a href="https://github.com/smile-robotics-lab" target="_blank">GitHub</a>
       <a href="https://www.youtube.com/@SMILERoboticsLab" target="_blank">Youtube</a>
     </div>
   </div>
