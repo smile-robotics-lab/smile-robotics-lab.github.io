@@ -2,6 +2,35 @@
    SMILE hero (title + orange initials in description)
    =========================== */
 
+html {
+  scroll-behavior: smooth;
+}
+
+.home-section {
+  scroll-margin-top: 5.5rem;
+}
+
+.home-section:not(.smile-hero) {
+  margin-top: 5rem;
+  padding-top: 1rem;
+}
+
+.section-title {
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1.15;
+  color: #111;
+  letter-spacing: 0;
+  margin: 0 0 1.6rem 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 .smile-hero {
   display: grid;
   grid-template-columns: minmax(340px, 1fr) minmax(360px, 560px);

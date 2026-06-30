@@ -3,7 +3,7 @@ layout: default
 permalink: /
 ---
 
-<section class="smile-hero">
+<section id="home" class="home-section smile-hero">
   <div class="left">
     <h1 class="title">SMILE Robotics Lab</h1>
 
@@ -27,3 +27,7 @@ permalink: /
     <img src="{{ site.baseurl }}/assets/img/hero/smile.gif" alt="SMILE Robotics Lab" loading="lazy"/>
   </div>
 </section>
+
+{% include lab-section.html %}
+
+{% include research-section.html %}

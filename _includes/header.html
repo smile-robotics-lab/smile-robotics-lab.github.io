@@ -9,15 +9,14 @@
     <nav class="site-nav primary">
       <!-- 桌面导航：左对齐的一排链接 -->
       <div class="links">
-        <a class="page-link {% if page.url == '/' %}active{% endif %}"
-           href="{{ site.baseurl }}/">Home</a>
+        <a class="page-link" data-nav-section="home"
+           href="{{ site.baseurl }}/#home">Home</a>
 
-        <a class="page-link {% if page.url contains '/projects' or page.url contains '/lab' %}active{% endif %}"
-           href="{{ site.baseurl }}/lab/">Lab</a>
+        <a class="page-link" data-nav-section="lab"
+           href="{{ site.baseurl }}/#lab">Lab</a>
 
-        <!-- 若没有 /research/ 页面，可把链接也指向 /projects/ -->
-        <a class="page-link {% if page.url contains '/research' %}active{% endif %}"
-           href="{{ site.baseurl }}/research/">Research</a>
+        <a class="page-link" data-nav-section="research"
+           href="{{ site.baseurl }}/#research">Research</a>
       </div>
 
       <!-- 移动端：汉堡按钮 + 下拉菜单 -->
@@ -33,9 +32,9 @@
       </label>
 
       <div class="trigger">
-        <a class="page-link" href="{{ site.baseurl }}/">Home</a>
-        <a class="page-link" href="{{ site.baseurl }}/lab/">Lab</a>
-        <a class="page-link" href="{{ site.baseurl }}/research/">Research</a>
+        <a class="page-link" data-nav-section="home" href="{{ site.baseurl }}/#home">Home</a>
+        <a class="page-link" data-nav-section="lab" href="{{ site.baseurl }}/#lab">Lab</a>
+        <a class="page-link" data-nav-section="research" href="{{ site.baseurl }}/#research">Research</a>
       </div>
     </nav>
   </div>
