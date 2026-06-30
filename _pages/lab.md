@@ -12,10 +12,9 @@ nav_order: 2         # 如果你有这个设置的话
 
 #### Faculty
 
-
 <div class="lab-grid">
   <div class="lab-member">
-    <a href="https://luyangzhao.github.io/">
+    <a class="member-main" href="https://luyangzhao.github.io/">
       <img src="/assets/img/people/luyangzhao.jpg" alt="Luyang Zhao">
       <strong>Luyang Zhao</strong>
     </a>
@@ -28,56 +27,126 @@ nav_order: 2         # 如果你有这个设置的话
 
 <div class="lab-grid">
   <div class="lab-member">
-    <a href="https://www.linkedin.com/in/yinhongqin980827/">
+    <a class="member-main" href="https://www.linkedin.com/in/yinhongqin980827/">
       <img src="/assets/img/people/yinhongqin.jpg" alt="Yinhong Qin">
       <strong>Yinhong Qin</strong>
     </a>
     <span>Ph.D. Student <br>(Fall 2025 - Present) </span>
   </div>
-  
+
+  <div class="lab-member">
+    <div class="member-main">
+      <img src="/assets/img/people/arifur-rahman.jpg" alt="Arifur Rahman">
+      <strong>Arifur Rahman</strong>
+    </div>
+    <span>Incoming Ph.D. Student <br>(Starting Fall 2026)</span>
   </div>
+
+  <div class="lab-member">
+    <div class="member-main">
+      <img src="/assets/img/people/dixiang-wang.jpg" alt="Dixiang Wang">
+      <strong>Dixiang Wang</strong>
+    </div>
+    <span>Incoming Ph.D. Student <br>(Starting Fall 2026)</span>
+  </div>
+</div>
 
 
 #### Master's Students
 
 <div class="lab-grid">
   <div class="lab-member">
-    <div>
+    <div class="member-main">
       <img src="/assets/img/people/minghaozha.jpg" alt="Minghao Zha">
       <strong>Minghao Zha</strong>
     </div>
-    <span>M.S. Student <br>(Fall 2025 - Present)</span>
+    <span>M.S. Student <br>(Fall 2025 - May 2026)</span>
+  </div>
+
+  <div class="lab-member">
+    <div class="member-main">
+      <img src="/assets/img/people/nicholas-burns.jpg" alt="Nicholas R. Burns">
+      <strong>Nicholas R. Burns</strong>
+    </div>
+    <span>M.S. Student / Research Assistant <br>(May 2026 - Present)</span>
   </div>
 </div>
 
-#### Undergraduate Students
+#### Undergraduate Research Assistants
 
-**Soft Robot Hand Design Group**
-* **Andry Janluca Aguero**
-* **Colton Barry**
-* **Gina Evelyn Bertotti**
-* **Jacob Wayne Brinson**
-* **Caleb Z Kim**
-* **Adalene P King**
-* **Anish Kulkarni**
-* **Liam Leo Loughead**
-* **SrikarNag Nallam**
-* **Kirsten Clement Reed**
-* **Lucaya Robertson**
-* **Alby Schirippa**
-* **Alex Tabaku**
-* **Jorge Y Valdez Reyna**
+<div class="lab-grid">
+  <div class="lab-member">
+    <div class="member-main">
+      <div class="member-avatar-placeholder" aria-label="Alex Tabaku">AT</div>
+      <strong>Alex Tabaku</strong>
+    </div>
+    <span>Undergraduate RA <br>(May 2026 - Present)</span>
+  </div>
 
+  <div class="lab-member">
+    <div class="member-main">
+      <img src="/assets/img/people/bryson-still.jpg" alt="Bryson Mathew Still">
+      <strong>Bryson Mathew Still</strong>
+    </div>
+    <span>Undergraduate RA <br>(May 2026 - Present)</span>
+  </div>
 
-**LLM-Driven Robotics Group**
-* **Ben Bedingfield**
-* **Clejah Nathello Daniel**
-* **Austin C Hill**
-* **Caleb Z Kim**
-* **Ethan Hayden M Mago**
-* **Ethan Patrick Santee**
-* **Alex Tabaku**
+  <div class="lab-member">
+    <div class="member-main">
+      <img src="/assets/img/people/clejah-daniel.jpg" alt="Clejah Nathello Daniel">
+      <strong>Clejah Nathello Daniel</strong>
+    </div>
+    <span>Undergraduate RA <br>(May 2026 - Present)</span>
+  </div>
 
+  <div class="lab-member">
+    <div class="member-main">
+      <img src="/assets/img/people/liam-loughead.jpg" alt="Liam Leo Loughead">
+      <strong>Liam Leo Loughead</strong>
+    </div>
+    <span>Undergraduate RA <br>(May 2026 - Present)</span>
+  </div>
+</div>
+
+#### Creative Inquiry Students
+
+<div class="lab-list-grid">
+  <div class="lab-list">
+    <h5>Soft Modular Robotic Hand</h5>
+    <span>Spring 2026</span>
+    <ul>
+      <li>Andry Janluca Aguero</li>
+      <li>Colton Barry</li>
+      <li>Gina Evelyn Bertotti</li>
+      <li>Jacob Wayne Brinson</li>
+      <li>Caleb Z Kim</li>
+      <li>Adalene P King</li>
+      <li>Anish Kulkarni</li>
+      <li>Liam Leo Loughead</li>
+      <li>SrikarNag Nallam</li>
+      <li>Kirsten Clement Reed</li>
+      <li>Lucaya Robertson</li>
+      <li>Alby Schirippa</li>
+      <li>Alex Tabaku</li>
+      <li>Jorge Y Valdez Reyna</li>
+    </ul>
+  </div>
+
+  <div class="lab-list">
+    <h5>LLM-Driven Robotics</h5>
+    <span>Spring 2026</span>
+    <ul>
+      <li>Ben Bedingfield</li>
+      <li>Clejah Nathello Daniel</li>
+      <li>Austin C Hill</li>
+      <li>Caleb Z Kim</li>
+      <li>Ethan Hayden M Mago</li>
+      <li>Ethan Patrick Santee</li>
+      <li>Alex Tabaku</li>
+      <li>Amolik Sinha</li>
+    </ul>
+  </div>
+</div>
 
 ---
 
