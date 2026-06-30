@@ -60,7 +60,7 @@ nav_order: 2         # 如果你有这个设置的话
       <img src="/assets/img/people/minghaozha.jpg" alt="Minghao Zha">
       <strong>Minghao Zha</strong>
     </div>
-    <span>M.S. Student <br>(Fall 2025 - May 2026)</span>
+    <span>M.S. Student / Research Assistant <br>Thesis: Fall 2025 - May 2026 <br>RA: May 2026 - Present</span>
   </div>
 
   <div class="lab-member">
