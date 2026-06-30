@@ -77,7 +77,7 @@ nav_order: 2         # 如果你有这个设置的话
 <div class="lab-grid">
   <div class="lab-member">
     <div class="member-main">
-      <div class="member-avatar-placeholder" aria-label="Alex Tabaku">AT</div>
+      <img src="/assets/img/people/alex-tabaku.jpg" alt="Alex Tabaku">
       <strong>Alex Tabaku</strong>
     </div>
     <span>Undergraduate RA <br>(May 2026 - Present)</span>
