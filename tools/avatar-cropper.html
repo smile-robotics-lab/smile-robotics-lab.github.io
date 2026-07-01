@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>People Photo Cropper</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f7f8;
+        --panel: #ffffff;
+        --ink: #182027;
+        --muted: #66717a;
+        --line: #dbe1e5;
+        --accent: #f66733;
+        --accent-dark: #c94d21;
+        --teal: #167a7f;
+        --shadow: 0 12px 28px rgba(24, 32, 39, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      button,
+      input,
+      select {
+        font: inherit;
+      }
+
+      .app {
+        width: min(1280px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 24px 0 32px;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        margin: 0 0 4px;
+        font-size: 24px;
+        line-height: 1.15;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(220px, 280px) minmax(420px, 1fr) minmax(250px, 320px);
+        gap: 16px;
+        align-items: start;
+      }
+
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .controls {
+        padding: 16px;
+      }
+
+      .control-group {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+
+      .control-group:last-child {
+        margin-bottom: 0;
+      }
+
+      label {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      select,
+      input[type="text"],
+      input[type="file"] {
+        width: 100%;
+        min-height: 38px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: #fff;
+        color: var(--ink);
+        padding: 8px 10px;
+      }
+
+      input[type="file"] {
+        padding: 6px;
+      }
+
+      input[type="range"] {
+        width: 100%;
+        accent-color: var(--accent);
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .button-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(44px, 1fr));
+        gap: 8px;
+      }
+
+      button {
+        min-height: 38px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: #fff;
+        color: var(--ink);
+        cursor: pointer;
+      }
+
+      button:hover {
+        border-color: #b9c3ca;
+      }
+
+      button:active {
+        transform: translateY(1px);
+      }
+
+      .primary {
+        border-color: var(--accent);
+        background: var(--accent);
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .primary:hover {
+        border-color: var(--accent-dark);
+        background: var(--accent-dark);
+      }
+
+      .quiet {
+        color: var(--muted);
+      }
+
+      .stage-panel {
+        padding: 14px;
+      }
+
+      .stage-wrap {
+        position: relative;
+        display: grid;
+        place-items: center;
+        width: 100%;
+        min-height: 420px;
+        border-radius: 6px;
+        background:
+          linear-gradient(45deg, #eef1f3 25%, transparent 25%),
+          linear-gradient(-45deg, #eef1f3 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, #eef1f3 75%),
+          linear-gradient(-45deg, transparent 75%, #eef1f3 75%);
+        background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+        background-size: 24px 24px;
+        overflow: hidden;
+      }
+
+      canvas {
+        display: block;
+        width: 100%;
+        max-width: 680px;
+        aspect-ratio: 1 / 1;
+        touch-action: none;
+        cursor: grab;
+      }
+
+      canvas.dragging {
+        cursor: grabbing;
+      }
+
+      .stage-help {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      .preview-panel {
+        padding: 16px;
+      }
+
+      .preview-box {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        margin: 8px 0 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #f9fafb;
+        overflow: hidden;
+      }
+
+      #previewCanvas {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        cursor: default;
+      }
+
+      .meta {
+        display: grid;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .status {
+        min-height: 20px;
+        color: var(--teal);
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      .warning {
+        color: #9a4b00;
+      }
+
+      .notice {
+        margin: 0 0 18px;
+        padding: 12px 14px;
+        border: 1px solid #f1b57d;
+        border-radius: 8px;
+        background: #fff7ed;
+        color: #7a3900;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .notice[hidden] {
+        display: none;
+      }
+
+      .notice p {
+        margin: 0;
+      }
+
+      .notice code {
+        color: #182027;
+      }
+
+      kbd {
+        display: inline-block;
+        min-width: 20px;
+        padding: 1px 5px;
+        border: 1px solid var(--line);
+        border-bottom-width: 2px;
+        border-radius: 4px;
+        background: #fff;
+        color: var(--ink);
+        font-size: 11px;
+        line-height: 1.4;
+        text-align: center;
+      }
+
+      @media (max-width: 1040px) {
+        .layout {
+          grid-template-columns: 260px minmax(420px, 1fr);
+        }
+
+        .preview-panel {
+          grid-column: 1 / -1;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .app {
+          width: min(100vw - 20px, 680px);
+          padding-top: 14px;
+        }
+
+        .topbar,
+        .layout {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        .stage-wrap {
+          min-height: 0;
+        }
+
+        .stage-help {
+          display: grid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app">
+      <div class="topbar">
+        <div>
+          <h1>People Photo Cropper</h1>
+          <p class="subtitle">Crop lab member photos to the 600 x 600 JPG format used by the website.</p>
+        </div>
+        <p class="subtitle">Drag to move. Scroll or use the slider to zoom.</p>
+      </div>
+
+      <div id="fileModeNotice" class="notice" hidden>
+        <p>
+          This page is open in file mode, so the browser may block JPG export.
+          From the repo folder, run <code>python3 -m http.server 8765</code>, then open
+          <code>http://127.0.0.1:8765/tools/avatar-cropper.html</code>.
+        </p>
+      </div>
+
+      <section class="layout">
+        <aside class="panel controls" aria-label="Crop controls">
+          <div class="control-group">
+            <label for="personSelect">Existing photo</label>
+            <select id="personSelect"></select>
+          </div>
+
+          <div class="control-group">
+            <label for="fileInput">Upload original</label>
+            <input id="fileInput" type="file" accept="image/*">
+          </div>
+
+          <div class="control-group">
+            <label for="fileName">Output file name</label>
+            <input id="fileName" type="text" value="avatar.jpg" spellcheck="false">
+          </div>
+
+          <div class="control-group">
+            <label for="zoomSlider">Zoom</label>
+            <input id="zoomSlider" type="range" min="1" max="6" step="0.01" value="1">
+            <div class="button-row">
+              <button id="zoomOut" type="button" aria-label="Zoom out">-</button>
+              <button id="fitImage" type="button">Fit</button>
+              <button id="zoomIn" type="button" aria-label="Zoom in">+</button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label>Nudge</label>
+            <div class="button-grid" aria-label="Nudge image">
+              <span></span>
+              <button id="nudgeUp" type="button" aria-label="Nudge up">Up</button>
+              <span></span>
+              <button id="nudgeLeft" type="button" aria-label="Nudge left">Left</button>
+              <button id="nudgeDown" type="button" aria-label="Nudge down">Down</button>
+              <button id="nudgeRight" type="button" aria-label="Nudge right">Right</button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label>Export</label>
+            <div class="button-row">
+              <button id="downloadBtn" class="primary" type="button">Download JPG</button>
+              <button id="saveBtn" type="button">Save as</button>
+            </div>
+            <div id="status" class="status" role="status"></div>
+          </div>
+        </aside>
+
+        <section class="panel stage-panel" aria-label="Crop workspace">
+          <div class="stage-wrap" id="stageWrap">
+            <canvas id="stageCanvas" aria-label="Crop canvas"></canvas>
+          </div>
+          <div class="stage-help">
+            <span>The square guide is the final crop area.</span>
+            <span><kbd>Arrow</kbd> nudges the photo, <kbd>Shift</kbd> nudges faster.</span>
+          </div>
+        </section>
+
+        <aside class="panel preview-panel" aria-label="Export preview">
+          <label>Preview</label>
+          <div class="preview-box">
+            <canvas id="previewCanvas" width="600" height="600" aria-label="600 by 600 preview"></canvas>
+          </div>
+          <div class="meta">
+            <div><strong>Output:</strong> 600 x 600 JPG</div>
+            <div><strong>Tip:</strong> use the same file name as the person image in <code>assets/img/people</code> when replacing it.</div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script>
+      const people = [
+        ["Luyang Zhao", "../assets/img/people/luyangzhao.jpg", "luyangzhao.jpg"],
+        ["Yinhong Qin", "../assets/img/people/yinhongqin.jpg", "yinhongqin.jpg"],
+        ["Arifur Rahman", "../assets/img/people/arifur-rahman.jpg", "arifur-rahman.jpg"],
+        ["Dixiang Wang", "../assets/img/people/dixiang-wang.jpg", "dixiang-wang.jpg"],
+        ["Minghao Zha", "../assets/img/people/minghaozha.jpg", "minghaozha.jpg"],
+        ["Nicholas R. Burns", "../assets/img/people/nicholas-burns.jpg", "nicholas-burns.jpg"],
+        ["Alex Tabaku", "../assets/img/people/alex-tabaku.jpg", "alex-tabaku.jpg"],
+        ["Bryson Mathew Still", "../assets/img/people/bryson-still.jpg", "bryson-still.jpg"],
+        ["Clejah Nathello Daniel", "../assets/img/people/clejah-daniel.jpg", "clejah-daniel.jpg"],
+        ["Liam Leo Loughead", "../assets/img/people/liam-loughead.jpg", "liam-loughead.jpg"]
+      ];
+
+      const stageCanvas = document.querySelector("#stageCanvas");
+      const previewCanvas = document.querySelector("#previewCanvas");
+      const stageWrap = document.querySelector("#stageWrap");
+      const personSelect = document.querySelector("#personSelect");
+      const fileInput = document.querySelector("#fileInput");
+      const fileName = document.querySelector("#fileName");
+      const zoomSlider = document.querySelector("#zoomSlider");
+      const statusEl = document.querySelector("#status");
+      const fileModeNotice = document.querySelector("#fileModeNotice");
+
+      const stageCtx = stageCanvas.getContext("2d");
+      const previewCtx = previewCanvas.getContext("2d");
+
+      const state = {
+        image: null,
+        imageUrl: "",
+        scale: 1,
+        minScale: 1,
+        maxScale: 6,
+        offsetX: 0,
+        offsetY: 0,
+        stageSize: 640,
+        crop: { x: 80, y: 80, size: 480 },
+        dragging: false,
+        lastX: 0,
+        lastY: 0
+      };
+
+      function setStatus(message, isWarning = false) {
+        statusEl.textContent = message;
+        statusEl.classList.toggle("warning", isWarning);
+      }
+
+      function isFileMode() {
+        return window.location.protocol === "file:";
+      }
+
+      function localServerHint() {
+        return "File mode can block export. Run python3 -m http.server 8765 from the repo folder, then open http://127.0.0.1:8765/tools/avatar-cropper.html.";
+      }
+
+      function sanitizeFileName(name) {
+        const base = (name || "avatar.jpg").trim().replace(/\\/g, "/").split("/").pop();
+        const clean = base.replace(/[^a-zA-Z0-9._-]+/g, "-").replace(/^-+|-+$/g, "");
+        return (clean || "avatar.jpg").replace(/\.(png|webp|jpeg)$/i, ".jpg").replace(/\.jpg$/i, "") + ".jpg";
+      }
+
+      function populatePeople() {
+        const blank = document.createElement("option");
+        blank.value = "";
+        blank.textContent = "Choose a site photo";
+        personSelect.append(blank);
+
+        for (const [name, path, output] of people) {
+          const option = document.createElement("option");
+          option.value = path;
+          option.dataset.output = output;
+          option.textContent = name;
+          personSelect.append(option);
+        }
+      }
+
+      function cropRect() {
+        const size = Math.round(state.stageSize * 0.74);
+        const x = Math.round((state.stageSize - size) / 2);
+        const y = x;
+        state.crop = { x, y, size };
+        return state.crop;
+      }
+
+      function resizeStage() {
+        const cssSize = Math.max(320, Math.min(680, stageWrap.clientWidth - 28));
+        const dpr = window.devicePixelRatio || 1;
+        state.stageSize = Math.round(cssSize);
+        stageCanvas.width = Math.round(cssSize * dpr);
+        stageCanvas.height = Math.round(cssSize * dpr);
+        stageCanvas.style.width = `${cssSize}px`;
+        stageCanvas.style.height = `${cssSize}px`;
+        stageCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        cropRect();
+        if (state.image) {
+          updateScaleLimits();
+          constrainImage();
+        }
+        draw();
+      }
+
+      function updateScaleLimits() {
+        const crop = cropRect();
+        const img = state.image;
+        state.minScale = Math.max(crop.size / img.naturalWidth, crop.size / img.naturalHeight);
+        state.maxScale = state.minScale * 7;
+        zoomSlider.min = String(state.minScale);
+        zoomSlider.max = String(state.maxScale);
+      }
+
+      function fitImage() {
+        if (!state.image) return;
+        updateScaleLimits();
+        const crop = cropRect();
+        state.scale = state.minScale * 1.18;
+        const drawnW = state.image.naturalWidth * state.scale;
+        const drawnH = state.image.naturalHeight * state.scale;
+        state.offsetX = crop.x + (crop.size - drawnW) / 2;
+        state.offsetY = crop.y + (crop.size - drawnH) / 2;
+        constrainImage();
+        syncZoomSlider();
+        draw();
+      }
+
+      function constrainImage() {
+        const crop = cropRect();
+        const img = state.image;
+        if (!img) return;
+        state.scale = Math.min(state.maxScale, Math.max(state.minScale, state.scale));
+        const drawnW = img.naturalWidth * state.scale;
+        const drawnH = img.naturalHeight * state.scale;
+        const minX = crop.x + crop.size - drawnW;
+        const maxX = crop.x;
+        const minY = crop.y + crop.size - drawnH;
+        const maxY = crop.y;
+        state.offsetX = Math.min(maxX, Math.max(minX, state.offsetX));
+        state.offsetY = Math.min(maxY, Math.max(minY, state.offsetY));
+      }
+
+      function syncZoomSlider() {
+        zoomSlider.value = String(state.scale);
+      }
+
+      function drawChecker(ctx, size) {
+        ctx.clearRect(0, 0, size, size);
+        ctx.fillStyle = "#eef1f3";
+        ctx.fillRect(0, 0, size, size);
+        ctx.fillStyle = "#f9fafb";
+        const step = 24;
+        for (let y = 0; y < size; y += step) {
+          for (let x = 0; x < size; x += step) {
+            if ((x / step + y / step) % 2 === 0) {
+              ctx.fillRect(x, y, step, step);
+            }
+          }
+        }
+      }
+
+      function draw() {
+        const size = state.stageSize;
+        const crop = cropRect();
+        drawChecker(stageCtx, size);
+
+        if (state.image) {
+          const img = state.image;
+          stageCtx.drawImage(
+            img,
+            state.offsetX,
+            state.offsetY,
+            img.naturalWidth * state.scale,
+            img.naturalHeight * state.scale
+          );
+        } else {
+          stageCtx.fillStyle = "#66717a";
+          stageCtx.textAlign = "center";
+          stageCtx.textBaseline = "middle";
+          stageCtx.font = "16px system-ui, sans-serif";
+          stageCtx.fillText("Choose or upload a photo", size / 2, size / 2);
+        }
+
+        stageCtx.save();
+        stageCtx.fillStyle = "rgba(24, 32, 39, 0.48)";
+        stageCtx.beginPath();
+        stageCtx.rect(0, 0, size, size);
+        stageCtx.rect(crop.x, crop.y, crop.size, crop.size);
+        stageCtx.fill("evenodd");
+        stageCtx.strokeStyle = "#fff";
+        stageCtx.lineWidth = 2;
+        stageCtx.strokeRect(crop.x + 1, crop.y + 1, crop.size - 2, crop.size - 2);
+        stageCtx.strokeStyle = "rgba(246, 103, 51, 0.9)";
+        stageCtx.lineWidth = 1;
+        stageCtx.strokeRect(crop.x + 8, crop.y + 8, crop.size - 16, crop.size - 16);
+        stageCtx.restore();
+
+        updatePreview();
+      }
+
+      function sourceCrop() {
+        const crop = cropRect();
+        return {
+          sx: (crop.x - state.offsetX) / state.scale,
+          sy: (crop.y - state.offsetY) / state.scale,
+          sw: crop.size / state.scale,
+          sh: crop.size / state.scale
+        };
+      }
+
+      function updatePreview() {
+        previewCtx.fillStyle = "#f9fafb";
+        previewCtx.fillRect(0, 0, 600, 600);
+        if (!state.image) return;
+        const { sx, sy, sw, sh } = sourceCrop();
+        previewCtx.imageSmoothingQuality = "high";
+        previewCtx.drawImage(state.image, sx, sy, sw, sh, 0, 0, 600, 600);
+      }
+
+      function loadImage(url, outputName) {
+        const img = new Image();
+        img.onload = () => {
+          state.image = img;
+          state.imageUrl = url;
+          fileName.value = sanitizeFileName(outputName);
+          if (isFileMode()) {
+            setStatus(localServerHint(), true);
+          } else {
+            setStatus(`Loaded ${img.naturalWidth} x ${img.naturalHeight}.`);
+          }
+          fitImage();
+        };
+        img.onerror = () => {
+          setStatus("Could not load this image. Try Upload original instead.", true);
+        };
+        img.src = url;
+      }
+
+      function zoomAt(nextScale, anchorX = state.stageSize / 2, anchorY = state.stageSize / 2) {
+        if (!state.image) return;
+        const clamped = Math.min(state.maxScale, Math.max(state.minScale, nextScale));
+        const imageX = (anchorX - state.offsetX) / state.scale;
+        const imageY = (anchorY - state.offsetY) / state.scale;
+        state.scale = clamped;
+        state.offsetX = anchorX - imageX * state.scale;
+        state.offsetY = anchorY - imageY * state.scale;
+        constrainImage();
+        syncZoomSlider();
+        draw();
+      }
+
+      function nudge(dx, dy) {
+        if (!state.image) return;
+        state.offsetX += dx;
+        state.offsetY += dy;
+        constrainImage();
+        draw();
+      }
+
+      function canvasPoint(event) {
+        const rect = stageCanvas.getBoundingClientRect();
+        return {
+          x: (event.clientX - rect.left) * (state.stageSize / rect.width),
+          y: (event.clientY - rect.top) * (state.stageSize / rect.height)
+        };
+      }
+
+      function exportBlob() {
+        return new Promise((resolve, reject) => {
+          try {
+            updatePreview();
+            previewCanvas.toBlob((blob) => {
+              if (blob) resolve(blob);
+              else reject(new Error("Export failed."));
+            }, "image/jpeg", 0.9);
+          } catch (error) {
+            reject(error);
+          }
+        });
+      }
+
+      async function downloadImage() {
+        if (!state.image) {
+          setStatus("Load a photo first.", true);
+          return;
+        }
+        setStatus("Preparing JPG...");
+        try {
+          const blob = await exportBlob();
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.href = url;
+          link.download = sanitizeFileName(fileName.value);
+          link.style.display = "none";
+          document.body.append(link);
+          link.click();
+          link.remove();
+          window.setTimeout(() => URL.revokeObjectURL(url), 30000);
+          if (isFileMode()) {
+            setStatus(`Download requested for ${link.download}. If nothing appears, use the local server URL above.`, true);
+          } else {
+            setStatus(`Download started for ${link.download}.`);
+          }
+        } catch (error) {
+          setStatus(localServerHint(), true);
+        }
+      }
+
+      async function saveImage() {
+        if (!("showSaveFilePicker" in window)) {
+          setStatus("Save as is not supported in this browser. Use Download JPG.", true);
+          return;
+        }
+        if (!state.image) {
+          setStatus("Load a photo first.", true);
+          return;
+        }
+        try {
+          const blob = await exportBlob();
+          const handle = await window.showSaveFilePicker({
+            suggestedName: sanitizeFileName(fileName.value),
+            types: [{ description: "JPEG image", accept: { "image/jpeg": [".jpg", ".jpeg"] } }]
+          });
+          const writable = await handle.createWritable();
+          await writable.write(blob);
+          await writable.close();
+          setStatus("Saved image.");
+        } catch (error) {
+          if (error.name !== "AbortError") {
+            setStatus("Save failed. Use Download JPG instead.", true);
+          }
+        }
+      }
+
+      personSelect.addEventListener("change", () => {
+        const option = personSelect.selectedOptions[0];
+        if (!option || !option.value) return;
+        fileInput.value = "";
+        loadImage(option.value, option.dataset.output);
+      });
+
+      fileInput.addEventListener("change", () => {
+        const file = fileInput.files && fileInput.files[0];
+        if (!file) return;
+        const url = URL.createObjectURL(file);
+        personSelect.value = "";
+        loadImage(url, file.name);
+      });
+
+      zoomSlider.addEventListener("input", () => {
+        zoomAt(Number(zoomSlider.value));
+      });
+
+      document.querySelector("#fitImage").addEventListener("click", fitImage);
+      document.querySelector("#zoomIn").addEventListener("click", () => zoomAt(state.scale * 1.08));
+      document.querySelector("#zoomOut").addEventListener("click", () => zoomAt(state.scale / 1.08));
+      document.querySelector("#nudgeUp").addEventListener("click", () => nudge(0, -6));
+      document.querySelector("#nudgeDown").addEventListener("click", () => nudge(0, 6));
+      document.querySelector("#nudgeLeft").addEventListener("click", () => nudge(-6, 0));
+      document.querySelector("#nudgeRight").addEventListener("click", () => nudge(6, 0));
+      document.querySelector("#downloadBtn").addEventListener("click", downloadImage);
+      document.querySelector("#saveBtn").addEventListener("click", saveImage);
+
+      stageCanvas.addEventListener("pointerdown", (event) => {
+        if (!state.image) return;
+        state.dragging = true;
+        stageCanvas.classList.add("dragging");
+        stageCanvas.setPointerCapture(event.pointerId);
+        const point = canvasPoint(event);
+        state.lastX = point.x;
+        state.lastY = point.y;
+      });
+
+      stageCanvas.addEventListener("pointermove", (event) => {
+        if (!state.dragging || !state.image) return;
+        const point = canvasPoint(event);
+        state.offsetX += point.x - state.lastX;
+        state.offsetY += point.y - state.lastY;
+        state.lastX = point.x;
+        state.lastY = point.y;
+        constrainImage();
+        draw();
+      });
+
+      stageCanvas.addEventListener("pointerup", (event) => {
+        state.dragging = false;
+        stageCanvas.classList.remove("dragging");
+        stageCanvas.releasePointerCapture(event.pointerId);
+      });
+
+      stageCanvas.addEventListener("wheel", (event) => {
+        if (!state.image) return;
+        event.preventDefault();
+        const point = canvasPoint(event);
+        const factor = event.deltaY < 0 ? 1.08 : 1 / 1.08;
+        zoomAt(state.scale * factor, point.x, point.y);
+      }, { passive: false });
+
+      window.addEventListener("keydown", (event) => {
+        if (!state.image) return;
+        const amount = event.shiftKey ? 18 : 6;
+        if (event.key === "ArrowUp") {
+          event.preventDefault();
+          nudge(0, -amount);
+        } else if (event.key === "ArrowDown") {
+          event.preventDefault();
+          nudge(0, amount);
+        } else if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          nudge(-amount, 0);
+        } else if (event.key === "ArrowRight") {
+          event.preventDefault();
+          nudge(amount, 0);
+        }
+      });
+
+      window.addEventListener("resize", resizeStage);
+
+      populatePeople();
+      resizeStage();
+      fileModeNotice.hidden = !isFileMode();
+      personSelect.value = people[5][1];
+      loadImage(people[5][1], people[5][2]);
+    </script>
+  </body>
+</html>
