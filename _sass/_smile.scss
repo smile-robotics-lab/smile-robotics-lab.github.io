@@ -209,6 +209,21 @@ html {
   max-width: 190px;
 }
 
+.member-profile-link {
+  margin-top: 0.35rem;
+  color: #F66733;
+  font-family: sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.member-profile-link:hover {
+  color: #c94d21;
+  text-decoration: underline;
+}
+
 .lab-list-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
