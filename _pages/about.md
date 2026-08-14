@@ -24,7 +24,10 @@ permalink: /
   </div>
 
   <div class="right">
-    <img src="{{ site.baseurl }}/assets/img/hero/smile.gif" alt="SMILE Robotics Lab" loading="lazy"/>
+    <picture>
+      <source srcset="{{ site.baseurl }}/assets/img/hero/smile.webp?v=soft-lattice-source-1" type="image/webp">
+      <img src="{{ site.baseurl }}/assets/img/hero/smile.gif?v=soft-lattice-source-1" alt="SMILE Robotics Lab" loading="lazy"/>
+    </picture>
   </div>
 </section>
 
