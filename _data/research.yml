@@ -1,0 +1,419 @@
+---
+areas:
+- id: physical
+  title: Human-Driven Robot Design
+  groups:
+  - title: Robot Platforms & Actuation
+    papers:
+    - zhaosci
+    - starblocks
+    - surface
+    - softsnap
+    - '9738480'
+    - manipulider
+    - aircraft2026underreview
+    - song2026woodpecker
+  - title: Robotics Education
+    papers:
+    - wu2026softroboticsworkshops
+- id: computational
+  title: Computational Design & Optimization
+  groups:
+  - title: Inverse Design, Modeling & Prototyping
+    papers:
+    - wang2026biologicalcurves
+    - dolphin
+    - airfoil
+- id: generative
+  title: AI-Driven Robot Design
+  groups:
+  - title: Language-Guided Design
+    papers:
+    - learning
+- id: assembly
+  title: Robotic Manipulation & Assembly
+  groups:
+  - title: Language-Conditioned Manipulation
+    papers:
+    - asciiart2026
+  - title: Modular Construction
+    papers:
+    - zhaosci
+- id: planning
+  title: Robot Learning, Planning & Autonomy
+  groups:
+  - title: World Models & Policy Learning
+    papers:
+    - flowmo2026
+  - title: Motion Planning
+    papers:
+    - '9341312'
+    - Putman2020PiecewiseLR
+    - '8901071'
+  - title: Perception & Autonomy
+    papers:
+    - mao2026tensegrityllm
+    - llmswarm
+    - seepersea
+    - jeong2024multimodal
+- id: related
+  title: Other Research
+  groups:
+  - title: Efficient AI & Assistive Systems
+    papers:
+    - codecgauge2026
+    - Ferland2018AssistiveAF
+papers:
+  zhaosci:
+    title: Modular shape-changing tensegrity-blocks enable self-assembling robotic
+      structures
+    url: https://www.nature.com/articles/s41467-025-60982-0
+    meta: Nature Communications, 2025
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://luyangzhao.github.io/assets/documents/papers/Tensegrity-Blocks.pdf
+      local: false
+    - label: Video
+      icon: fa-play-circle-o
+      url: https://www.youtube.com/watch?v=jOUSHgtKf8o
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/zhaosci.bib"
+      local: true
+  starblocks:
+    title: 'StarBlocks: Soft Actuated Self-Connecting Blocks for Building Deformable
+      Lattice Structures'
+    url: https://ieeexplore.ieee.org/abstract/document/10146508
+    meta: IEEE Robotics and Automation Letters, 2023
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://luyangzhao.github.io/assets/documents/papers/soft2.pdf
+      local: false
+    - label: Video
+      icon: fa-play-circle-o
+      url: https://www.youtube.com/watch?v=xno0FBs3ZdQ
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/starblocks.bib"
+      local: true
+  surface:
+    title: 'SoftRafts: Floating and Adaptive Soft Modular Robots'
+    url: https://www.nature.com/articles/s44182-025-00070-z
+    meta: npj Robotics, 2026
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://luyangzhao.github.io/assets/documents/papers/SoftRaft.pdf
+      local: false
+    - label: Code
+      icon: fa-github
+      url: https://github.com/luyangzhao/SoftRafts
+      local: false
+    - label: Video
+      icon: fa-play-circle-o
+      url: https://www.youtube.com/watch?v=L9Rf5gL8sXc
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/surface.bib"
+      local: true
+  softsnap:
+    title: 'SoftSnap: Rapid Prototyping of Untethered Soft Robots Using Snap-Together
+      Modules'
+    url: https://www.liebertpub.com/doi/10.1089/soro.2024.0170
+    meta: Soft Robotics, 2025
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://luyangzhao.github.io/assets/documents/papers/softsnap.pdf
+      local: false
+    - label: Code
+      icon: fa-github
+      url: https://github.com/luyangzhao/SoftSnap.git
+      local: false
+    - label: Video
+      icon: fa-play-circle-o
+      url: https://www.youtube.com/watch?v=Esyzsk5-VEg
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/softsnap.bib"
+      local: true
+  '9738480':
+    title: Soft Lattice Modules That Behave Independently and Collectively
+    url: https://ieeexplore.ieee.org/abstract/document/9738480
+    meta: IEEE Robotics and Automation Letters, 2022
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://luyangzhao.github.io/assets/documents/papers/soft1.pdf
+      local: false
+    - label: Video
+      icon: fa-play-circle-o
+      url: https://www.youtube.com/watch?v=EYLYyijfzCg
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/9738480.bib"
+      local: true
+  manipulider:
+    title: 'Manipulider: A Multi-Engine Buoyancy-Controlled Robot for Thrusterless
+      Underwater Gliding and Manipulation'
+    url: https://arxiv.org/abs/2606.21461
+    meta: IROS, 2026
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://arxiv.org/pdf/2606.21461
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/manipulider.bib"
+      local: true
+  aircraft2026underreview:
+    title: Design, Fabrication, and Testing of a Tensegrity Morphing Aircraft
+    url: 
+    meta: Under review, 2026 / Manuscript not publicly available
+    resources:
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/aircraft2026underreview.bib"
+      local: true
+  song2026woodpecker:
+    title: Woodpecker-inspired pneumatic soft actuator with large retraction stroke
+    url: https://doi.org/10.1016/j.cej.2026.183207
+    meta: Chemical Engineering Journal, 2026
+    resources:
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/song2026woodpecker.bib"
+      local: true
+  wu2026softroboticsworkshops:
+    title: 'Work-in-Progress: Multidisciplinary Soft Robotics Workshops to Foster
+      Collaborative and Experiential Learning'
+    url: https://peer.asee.org/work-in-progress-multidisciplinary-soft-robotics-workshops-to-foster-collaborative-and-experiential-learning
+    meta: ASEE Annual Conference & Exposition, 2026 / Work in progress
+    resources:
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/wu2026softroboticsworkshops.bib"
+      local: true
+  wang2026biologicalcurves:
+    title: 'From Biological Curves to Soft Modular Robots: Learning-Based Inverse
+      Design with Uncertainty-Guided Refinement'
+    url: https://arxiv.org/abs/2610.36681
+    meta: Preprint / Under submission, 2026
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://arxiv.org/pdf/2610.36681
+      local: false
+    - label: Video
+      icon: fa-play-circle-o
+      url: https://www.youtube.com/watch?v=4Xw9c4H2Etk
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/wang2026biologicalcurves.bib"
+      local: true
+  dolphin:
+    title: An Untethered Bioinspired Robotic Tensegrity Dolphin with Multi-Flexibility
+      Design for Aquatic Locomotion
+    url: https://ieeexplore.ieee.org/abstract/document/11020959
+    meta: RoboSoft, 2025
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://luyangzhao.github.io/assets/documents/papers/dolphin.pdf
+      local: false
+    - label: Code
+      icon: fa-github
+      url: https://github.com/luyangzhao/Tensegrity-Dolphin-Robot
+      local: false
+    - label: Video
+      icon: fa-play-circle-o
+      url: https://www.youtube.com/watch?v=avUUYTJ178g
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/dolphin.bib"
+      local: true
+  airfoil:
+    title: Design of A Lightweight Robotic Tensegrity Morphing Airfoil
+    url: https://arc.aiaa.org/doi/10.2514/6.2026-0259
+    meta: AIAA SciTech Forum, 2026
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://luyangzhao.github.io/assets/documents/papers/AIAA_SciTech2026_Airfoil.pdf
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/airfoil.bib"
+      local: true
+  learning:
+    title: On the Exploration of LM-Based Soft Modular Robot Design
+    url: https://arxiv.org/abs/2411.00345
+    meta: Preprint, 2024 / Equal contribution
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://luyangzhao.github.io/assets/documents/papers/learning.pdf
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/learning.bib"
+      local: true
+  asciiart2026:
+    title: ASCII Art Turns LLMs into VLA Controllers
+    url: https://arxiv.org/abs/2606.21470
+    meta: Preprint / Under review, 2026
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://arxiv.org/pdf/2606.21470
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/asciiart2026.bib"
+      local: true
+  flowmo2026:
+    title: 'FlowMo-WM: A World Model with Object Momentum and Hidden Ambient Drift'
+    url: https://arxiv.org/abs/2606.13817
+    meta: Preprint / Under review, 2026
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://arxiv.org/pdf/2606.13817
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/flowmo2026.bib"
+      local: true
+  '9341312':
+    title: 'PLRC*: A piecewise linear regression complex for approximating optimal
+      robot motion'
+    url: https://ieeexplore.ieee.org/abstract/document/9341312
+    meta: IROS, 2020
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://luyangzhao.github.io/assets/documents/papers/plrc.pdf
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/9341312.bib"
+      local: true
+  Putman2020PiecewiseLR:
+    title: Piecewise linear regressions for approximating distance metrics
+    url: https://arxiv.org/abs/2002.12466
+    meta: arXiv preprint, 2020
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://luyangzhao.github.io/assets/documents/papers/plr.pdf
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/Putman2020PiecewiseLR.bib"
+      local: true
+  '8901071':
+    title: 'LLDM: Locally linear distance maps for robot motion planning: Extended
+      Abstract'
+    url: https://ieeexplore.ieee.org/abstract/document/8901071
+    meta: MRS, 2019 / Extended abstract
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://luyangzhao.github.io/assets/documents/papers/lldm.pdf
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/8901071.bib"
+      local: true
+  mao2026tensegrityllm:
+    title: Fine-tuned multimodal large language model for autonomous state cognition
+      system of shape-recognition 6-bar tensegrity integrated with flexible sensors
+    url: https://doi.org/10.1038/s41378-026-01322-0
+    meta: Microsystems & Nanoengineering, 2026
+    resources:
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/mao2026tensegrityllm.bib"
+      local: true
+  llmswarm:
+    title: Exploring Spontaneous Social Interaction Swarm Robotics Powered by Large
+      Language Models
+    url: https://ieeexplore.ieee.org/document/11246362
+    meta: IROS, 2025
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://luyangzhao.github.io/assets/documents/papers/llmswarm.pdf
+      local: false
+    - label: Video
+      icon: fa-play-circle-o
+      url: https://drive.google.com/file/d/14bz-UbZI_IxojBwJtlQ1MuGJati8-cCm/preview
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/llmswarm.bib"
+      local: true
+  seepersea:
+    title: 'SeePerSea: Multi-modal Perception Dataset of In-water Objects for Autonomous
+      Surface Vehicles'
+    url: https://doi.org/10.1109/TFR.2025.3602937
+    meta: IEEE Transactions on Field Robotics, 2025
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://luyangzhao.github.io/assets/documents/papers/seepersea.pdf
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/seepersea.bib"
+      local: true
+  jeong2024multimodal:
+    title: Multi-modal Perception Dataset of In-water Objects for Autonomous Surface
+      Vehicles
+    url: https://arxiv.org/abs/2404.18411
+    meta: ICRA Workshop on Field Robotics, 2024
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://arxiv.org/pdf/2404.18411
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/jeong2024multimodal.bib"
+      local: true
+  codecgauge2026:
+    title: 'Codec-Gauge: Learning Compression-Friendly Gauges for Transformer KV Caches'
+    url: https://arxiv.org/abs/2607.20538
+    meta: Preprint / Under review, 2026
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://arxiv.org/pdf/2607.20538
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/codecgauge2026.bib"
+      local: true
+  Ferland2018AssistiveAF:
+    title: Assistive AI for Coping with Memory Loss
+    url: https://cdn.aaai.org/ocs/ws/ws0528/17360-76000-1-PB.pdf
+    meta: AAAI Workshops, 2018
+    resources:
+    - label: PDF
+      icon: fa-file-pdf-o
+      url: https://luyangzhao.github.io/assets/documents/papers/assistant.pdf
+      local: false
+    - label: BibTeX
+      icon: fa-quote-right
+      url: "/assets/documents/bib/Ferland2018AssistiveAF.bib"
+      local: true

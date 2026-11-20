@@ -1,0 +1,18 @@
+---
+layout: default
+title: Publications by Research Area
+permalink: /research/publications/
+research: true
+---
+<section class="research-section research-catalog">
+  <header class="intro">
+    <a class="catalog-back" href="{{ site.baseurl }}/#research">SMILE Robotics Lab / Research</a>
+    <h1>Publications by Research Area</h1>
+  </header>
+  {% for area in site.data.research.areas %}
+  <section class="catalog-area" id="{{ area.id }}">
+    <h2>{{ area.title | escape }}</h2>
+    {% include research-publications.html area=area %}
+  </section>
+  {% endfor %}
+</section>

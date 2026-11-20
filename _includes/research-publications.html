@@ -1,0 +1,28 @@
+<div class="publications" data-publication-area="{{ include.area.id }}">
+  <h3>Publications</h3>
+  {% for group in include.area.groups %}
+  <section class="publication-group">
+    <h4>{{ group.title | escape }}</h4>
+    <ul class="publication-list">
+      {% for paper_id in group.papers %}
+      {% assign paper = site.data.research.papers[paper_id] %}
+      <li data-paper-id="{{ paper_id }}">
+        <div class="publication-copy">
+          {% if paper.url %}
+          <a class="paper-title" href="{{ paper.url | escape }}" target="_blank" rel="noopener">{{ paper.title | escape }}</a>
+          {% else %}
+          <span class="paper-title">{{ paper.title | escape }}</span>
+          {% endif %}
+          <span class="paper-meta">{{ paper.meta | escape }}</span>
+          <div class="publication-resources">
+            {% for resource in paper.resources %}
+            <a href="{% if resource.local %}{{ site.baseurl }}{% endif %}{{ resource.url | escape }}" target="_blank" rel="noopener" aria-label="{{ resource.label | escape }} for {{ paper.title | escape }}">{{ resource.label | escape }} <i class="fa {{ resource.icon }}" aria-hidden="true"></i></a>
+            {% endfor %}
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>

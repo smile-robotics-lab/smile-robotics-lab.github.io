@@ -1,170 +1,266 @@
 <section id="research" class="home-section research-section">
-  <h2 class="section-title">Research</h2>
+    <header class="intro">
+      <p class="eyebrow">Intelligence by Design</p>
+      <h2 class="research-page-title">Research</h2>
+      <p>We design adaptable robot bodies and develop the computational tools and assembly methods that bring them to life.</p>
+      <nav class="area-nav" aria-label="Research areas">
+        <a href="#physical">Physical design</a><a href="#computational">Computational design</a><a href="#generative">AI-driven design</a><a href="#assembly">Manipulation &amp; assembly</a><a href="#planning">Learning &amp; autonomy</a>
+      </nav>
+    </header>
 
-  <h4>Main Research Projects</h4>
+    <section class="research-area" id="physical" aria-labelledby="physical-title">
+      <div class="area-heading">
+<span class="number">01</span><h3 id="physical-title">Human-Driven Robot Design</h3>
+</div>
+      <p class="description">Soft, modular, and tensegrity structures give robots new ways to move, adapt, and interact.</p>
+      <a class="visual-strip physical-strip" href="{{ site.baseurl }}/research/publications/#physical" data-detail="physical" aria-label="Explore human-driven robot design" title="View research and publications">
+        <figure><div class="image-cell"><img src="{{ site.baseurl }}/assets/img/research/physical-starblocks.png" alt="Red and blue StarBlocks assembled into a four-legged robot"></div>
+<figcaption>StarBlocks</figcaption></figure>
+        <figure><div class="image-cell"><img src="{{ site.baseurl }}/assets/img/research/physical-softrafts.png" alt="A floating SoftRafts platform supporting a quadrotor"></div>
+<figcaption>SoftRafts</figcaption></figure>
+        <figure class="third-example"><div class="image-cell"><img src="{{ site.baseurl }}/assets/img/research/physical-softsnap.png" alt="Five flexible SoftSnap arms joined to a central actuator"></div>
+<figcaption>SoftSnap</figcaption></figure>
+        <span class="expand-icon"><i class="fa fa-expand" aria-hidden="true"></i></span>
+      </a>
+      <div class="selected-heading">
+<h3>Selected publications</h3>
+<a href="{{ site.baseurl }}/research/publications/#physical" data-publications="physical">View publications <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+</div>
+      <ul class="selected-papers">
+<li data-paper-id="zhaosci">
+<a href="https://www.nature.com/articles/s41467-025-60982-0" target="_blank" rel="noopener">Tensegrity-Blocks <i class="fa fa-external-link" aria-hidden="true"></i></a><span>Nature Communications, 2025</span>
+</li>
+<li data-paper-id="starblocks">
+<a href="https://ieeexplore.ieee.org/abstract/document/10146508" target="_blank" rel="noopener">StarBlocks <i class="fa fa-external-link" aria-hidden="true"></i></a><span>IEEE Robotics and Automation Letters, 2023</span>
+</li>
+</ul>
+    </section>
 
-  <div class="projects-grid">
+    <section class="research-area" id="computational" aria-labelledby="computational-title">
+      <div class="area-heading">
+<span class="number">02</span><h3 id="computational-title">Computational Design &amp; Optimization</h3>
+</div>
+      <p class="description">Physics-based models and learned inverse design turn desired shapes into realizable robot bodies.</p>
+      <a class="visual-strip computational-strip" href="{{ site.baseurl }}/research/publications/#computational" data-detail="computational" aria-label="Explore computational robot design" title="View research and publications">
+        <figure><div class="image-cell"><img src="{{ site.baseurl }}/assets/img/research/design-target.png" alt="A caterpillar as the biological shape reference" loading="lazy"></div>
+<figcaption>Biological shape</figcaption></figure>
+        <i class="fa fa-long-arrow-right flow-arrow" aria-hidden="true"></i>
+        <figure><div class="image-cell"><img src="{{ site.baseurl }}/assets/img/research/design-computed.png" alt="Computed cable-routing design matching the target shape" loading="lazy"></div>
+<figcaption>Computed design</figcaption></figure>
+        <i class="fa fa-long-arrow-right flow-arrow" aria-hidden="true"></i>
+        <figure><div class="image-cell"><img src="{{ site.baseurl }}/assets/img/research/design-physical.png" alt="A yellow modular soft robot shaped like a caterpillar" loading="lazy"></div>
+<figcaption>Physical robot</figcaption></figure>
+        <span class="expand-icon"><i class="fa fa-expand" aria-hidden="true"></i></span>
+      </a>
+      <div class="selected-heading">
+<h3>Selected publications</h3>
+<a href="{{ site.baseurl }}/research/publications/#computational" data-publications="computational">View publications <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+</div>
+      <ul class="selected-papers">
+<li data-paper-id="wang2026biologicalcurves">
+<a href="https://arxiv.org/abs/2610.36681" target="_blank" rel="noopener">From Biological Curves to Soft Modular Robots <i class="fa fa-external-link" aria-hidden="true"></i></a><span>Preprint, 2026</span>
+</li>
+<li data-paper-id="dolphin">
+<a href="https://ieeexplore.ieee.org/abstract/document/11020959" target="_blank" rel="noopener">Tensegrity Dolphin <i class="fa fa-external-link" aria-hidden="true"></i></a><span>RoboSoft, 2025</span>
+</li>
+</ul>
+    </section>
 
-    <div class="project-item" onclick="toggleDetails(this)">
-      <div class="project-image-container">
-        <img src="{{ site.baseurl }}/assets/img/teasers/proj1.png" alt="Terrestrial Modular Soft Robots">
-        <div class="overlay-text">
-          <h4>Terrestrial Modular Soft Robots</h4>
+    <section class="research-area" id="generative" aria-labelledby="generative-title">
+      <div class="area-heading">
+<span class="number">03</span><h3 id="generative-title">AI-Driven Robot Design</h3>
+</div>
+      <p class="description">Language models and simulation feedback guide the search for robot morphologies and control.</p>
+      <a class="design-framework" href="{{ site.baseurl }}/research/publications/#generative" data-detail="generative" aria-label="Explore AI-driven robot design" title="View research and publications">
+        <div class="framework-heading">
+<span>Task-to-robot design</span><span>Proposed research framework</span>
+</div>
+        <div class="framework-flow">
+          <figure class="framework-input">
+            <h3>Specify</h3>
+            <div class="module-visual"><img src="{{ site.baseurl }}/assets/img/research/ai-module.png" alt="Published soft modular robot unit showing its skeleton, springs, and magnetic connectors" loading="lazy"></div>
+            <figcaption>Module, task &amp; environment</figcaption>
+          </figure>
+          <i class="fa fa-long-arrow-right framework-arrow" aria-hidden="true"></i>
+          <div class="framework-search">
+            <h3>Generate &amp; evaluate</h3>
+            <div class="search-loop">
+              <div class="model-node">Generative AI<span>Robot design model</span>
+</div>
+              <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+              <div class="simulation-node">Simulation<span>Performance &amp; feasibility</span>
+</div>
+              <span class="evaluation-return"><i class="fa fa-repeat" aria-hidden="true"></i> Evaluation feedback</span>
+            </div>
+          </div>
+          <i class="fa fa-long-arrow-right framework-arrow" aria-hidden="true"></i>
+          <figure class="framework-physical">
+            <h3>Test &amp; calibrate</h3>
+            <div class="prototype-visual"><img src="{{ site.baseurl }}/assets/img/research/ai-calibration-real.png" alt="Existing five-module physical robot used as the calibration example in the research statement, not a robot generated by the proposed loop" loading="lazy"></div>
+            <figcaption>Existing physical prototype</figcaption>
+          </figure>
         </div>
-      </div>
-      <div class="project-details">
-        <div>
-          <strong>Related Papers:</strong>
-          <ul>
-            <li><a href="{{ site.baseurl }}/assets/documents/papers/Tensegrity-Blocks.pdf" target="_blank">Modular Shape-changing Tensegrity-Blocks Enable Self-assembling Robotic Structures</a></li>
-            <li><a href="{{ site.baseurl }}/assets/documents/papers/soft1.pdf" target="_blank">Soft Lattice Modules That Behave Independently and Collectively</a></li>
-            <li><a href="{{ site.baseurl }}/assets/documents/papers/soft2.pdf" target="_blank">StarBlocks: Soft Actuated Self-Connecting Blocks for Building Deformable Lattice Structures</a></li>
-          </ul>
-        </div>
-        <div>
-          <strong>Related Videos:</strong>
-          <ul>
-            <li><a href="https://www.youtube.com/watch?v=jOUSHgtKf8o" target="_blank">Tensegrity-Blocks Video</a></li>
-            <li><a href="https://www.youtube.com/watch?v=EYLYyijfzCg" target="_blank">Soft Lattice Modules Video</a></li>
-            <li><a href="https://www.youtube.com/watch?v=xno0FBs3ZdQ" target="_blank">StarBlocks Video</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+        <div class="physical-feedback">
+<i class="fa fa-long-arrow-left" aria-hidden="true"></i><span>Physical feedback: refine the module and model</span>
+</div>
+        <span class="expand-icon"><i class="fa fa-expand" aria-hidden="true"></i></span>
+      </a>
+      <div class="selected-heading">
+<h3>Selected publication</h3>
+<a href="{{ site.baseurl }}/research/publications/#generative" data-publications="generative">View publications <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+</div>
+      <ul class="selected-papers"><li data-paper-id="learning">
+<a href="https://arxiv.org/abs/2411.00345" target="_blank" rel="noopener">LM-Based Soft Modular Robot Design <i class="fa fa-external-link" aria-hidden="true"></i></a><span>Preprint, 2024</span>
+</li></ul>
+    </section>
 
-    <div class="project-item" onclick="toggleDetails(this)">
-      <div class="project-image-container">
-        <img src="{{ site.baseurl }}/assets/img/teasers/proj2.png" alt="Flexible Bio-Inspired Robotics">
-        <div class="overlay-text">
-          <h4>Flexible Bio-Inspired Robotics</h4>
-        </div>
+    <section class="research-area" id="assembly" aria-labelledby="assembly-title">
+      <div class="area-heading">
+<span class="number">04</span><h3 id="assembly-title">Robotic Manipulation &amp; Assembly</h3>
+</div>
+      <p class="description">We study language-conditioned manipulation and modular construction, from learned action policies to physical assembly.</p>
+      <div class="assembly-projects">
+        <article class="assembly-project vla-project" id="vla-project" aria-labelledby="vla-project-title">
+          <div class="assembly-story-heading">
+<h3 id="vla-project-title">VLA-based manipulation</h3>
+<span class="project-status">Preprint</span>
+</div>
+          <a class="project-visual" href="https://arxiv.org/abs/2606.21470" data-detail="assembly" data-project="vla-project" aria-label="Enlarge ASCII-VLA figure" title="Enlarge figure">
+            <div class="vla-story-visual">
+              <p class="vla-task"><span>Task</span> Move the red object to the red target.</p>
+              <div class="vla-scenes">
+                <div class="rollout-step">
+<div class="rollout-image"><div class="vla-viewport"><img src="{{ site.baseurl }}/assets/img/research/ascii-vla-figure6-original.png" alt="Original Figure 6, Step 0: the physical robot before moving the red object, with the source object and target visible" width="4902" height="2403" loading="lazy"></div></div>
+<span>Initial state <span class="step-index">Step 0</span></span>
+</div>
+                <i class="fa fa-long-arrow-right construction-arrow" aria-hidden="true"></i>
+                <div class="rollout-step">
+<div class="rollout-image"><div class="vla-viewport at-target"><img src="{{ site.baseurl }}/assets/img/research/ascii-vla-figure6-original.png" alt="Original Figure 6, Step 3: the physical manipulator has transported the red object to the red target" width="4902" height="2403" loading="lazy"></div></div>
+<span>At the target <span class="step-index">Step 3</span></span>
+</div>
+              </div>
+            </div>
+            <span class="expand-icon"><i class="fa fa-expand" aria-hidden="true"></i></span>
+          </a>
+          <p class="project-caption">Language-conditioned control on a physical manipulator</p>
+          <div class="project-meta">
+            <span class="project-meta-label">Preprint</span>
+            <a class="project-title" href="https://arxiv.org/abs/2606.21470" target="_blank" rel="noopener">ASCII Art Turns LLMs into VLA Controllers <i class="fa fa-external-link" aria-hidden="true"></i></a>
+            <span class="project-venue">arXiv preprint, 2026</span>
+            <div class="project-links"><a class="text-link" href="https://arxiv.org/pdf/2606.21470" target="_blank" rel="noopener"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Paper</a></div>
+          </div>
+        </article>
+        <article class="assembly-project aerial-project project-separated" id="aerial-project" aria-labelledby="aerial-project-title">
+          <div class="assembly-story-heading">
+<h3 id="aerial-project-title">Aerial construction</h3>
+<span class="project-status">Published work</span>
+</div>
+          <a class="project-visual" href="{{ site.baseurl }}/research/publications/#assembly" data-detail="assembly" data-project="aerial-project" aria-label="Enlarge aerial construction figure" title="Enlarge figure">
+            <div class="aerial-scenes">
+              <div class="construction-step">
+<div class="step-image"><img src="{{ site.baseurl }}/assets/img/research/assembly-shelter-frame.png" alt="Rotorcraft assembling the modular tensegrity frame for a shelter" width="246" height="256" loading="lazy"></div>
+<span>Frame assembly</span>
+</div>
+              <i class="fa fa-long-arrow-right construction-arrow" aria-hidden="true"></i>
+              <div class="construction-step">
+<div class="step-image"><img src="{{ site.baseurl }}/assets/img/research/assembly-shelter.png" alt="The same type of modular shelter framework supporting a tent-like covering; the fabric was placed by hand" width="420" height="225" loading="lazy"></div>
+<span>Shelter</span>
+</div>
+            </div>
+            <span class="expand-icon"><i class="fa fa-expand" aria-hidden="true"></i></span>
+          </a>
+          <p class="project-caption">Rotorcraft-assembled frame; fabric placed by hand.</p>
+          <div class="project-meta">
+            <span class="project-meta-label">Publication</span>
+            <a class="project-title" href="https://www.nature.com/articles/s41467-025-60982-0" target="_blank" rel="noopener">Tensegrity-Blocks <i class="fa fa-external-link" aria-hidden="true"></i></a>
+            <span class="project-venue">Nature Communications, 2025</span>
+            <div class="project-links"><a class="text-link" href="https://www.youtube.com/watch?v=jOUSHgtKf8o" target="_blank" rel="noopener" aria-label="Watch the Tensegrity Blocks project video"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Video</a></div>
+          </div>
+        </article>
       </div>
-      <div class="project-details">
-        <div>
-          <strong>Related Papers:</strong>
-          <ul>
-            <li><a href="{{ site.baseurl }}/assets/documents/papers/dolphin.pdf" target="_blank">An Untethered Bioinspired Robotic Tensegrity Dolphin with Multi-Flexibility Design for Aquatic Locomotion</a></li>
-          </ul>
-        </div>
-        <div>
-          <strong>Related Videos:</strong>
-          <ul>
-            <li><a href="https://www.youtube.com/watch?v=avUUYTJ178g" target="_blank">Robotic Tensegrity Dolphin Video</a></li>
-          </ul>
-        </div>
-        <div>
-          <strong>Related Code & Hardware:</strong>
-          <ul>
-            <li><a href="https://github.com/luyangzhao/Tensegrity-Dolphin-Robot" target="_blank">Tensegrity Dolphin Robot Repository</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+<div class="selected-heading">
+<h3>Related publications</h3>
+<a data-publications="assembly" href="{{ site.baseurl }}/research/publications/#assembly">View publications <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+</div>
+      <article class="ongoing-work" id="tool-project" aria-labelledby="tool-project-title">
+        <div class="ongoing-work-heading">
+<span>Ongoing Work</span><h3 id="tool-project-title">GripSnap: Reconfigurable Tool Use</h3>
+</div>
+        <span class="project-status ongoing">Unpublished; manuscript in preparation</span>
+      </article>
+    </section>
 
-    <div class="project-item" onclick="toggleDetails(this)">
-      <div class="project-image-container">
-        <img src="{{ site.baseurl }}/assets/img/teasers/proj3.png" alt="Design for Soft Robots for Assembly">
-        <div class="overlay-text">
-          <h4>Design for Soft Robots for Assembly</h4>
-        </div>
-      </div>
-      <div class="project-details">
-        <div>
-          <strong>Related Papers:</strong>
-          <ul>
-            <li><a href="{{ site.baseurl }}/assets/documents/papers/softsnap.pdf" target="_blank">SoftSnap: Rapid Prototyping of Untethered Soft Robots Using Snap-Together Modules</a></li>
-          </ul>
-        </div>
-        <div>
-          <strong>Related Videos:</strong>
-          <ul>
-            <li><a href="https://www.youtube.com/watch?v=Esyzsk5-VEg" target="_blank">SoftSnap Modules Video</a></li>
-          </ul>
-        </div>
-        <div>
-          <strong>Related Code & Hardware:</strong>
-          <ul>
-            <li><a href="https://github.com/luyangzhao/SoftSnap" target="_blank">SoftSnap Repository</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <section class="research-area" id="planning" aria-labelledby="planning-title">
+      <div class="area-heading">
+<span class="number">05</span><h3 id="planning-title">Robot Learning, Planning &amp; Autonomy</h3>
+</div>
+      <p class="description">We study world models for policy learning, alongside perception and efficient motion planning for autonomous robot behavior.</p>
+      <a class="visual-strip autonomy-strip" href="{{ site.baseurl }}/research/publications/#planning" data-detail="planning" aria-label="Explore robot learning, planning and autonomy" title="View research and publications">
+        <figure><div class="image-cell"><img src="{{ site.baseurl }}/assets/img/research/autonomy-aerial-sensing.png" alt="The rotorcraft-mounted camera used for aerial sensing; its aerial position was manually controlled during the ground-docking experiment" loading="lazy"></div>
+<figcaption>Aerial sensing</figcaption></figure>
+        <i class="fa fa-long-arrow-right flow-arrow" aria-hidden="true"></i>
+        <figure><div class="image-cell"><img src="{{ site.baseurl }}/assets/img/research/autonomy-pose-estimation.png" alt="Measured positions and orientations of two ground modules, with published pose-estimation overlays retained" loading="lazy"></div>
+<figcaption>State estimation</figcaption></figure>
+        <i class="fa fa-long-arrow-right flow-arrow" aria-hidden="true"></i>
+        <figure><div class="image-cell"><img src="{{ site.baseurl }}/assets/img/research/autonomy-planned-motion.png" alt="The published automatically planned movement path for a ground module approaching a connection" loading="lazy"></div>
+<figcaption>Motion planning</figcaption></figure>
+        <i class="fa fa-long-arrow-right flow-arrow" aria-hidden="true"></i>
+        <figure><div class="image-cell"><img src="{{ site.baseurl }}/assets/img/research/autonomy-ground-docking.png" alt="Three connected ground modules after automated docking, with the original 50 centimeter scale bar retained" loading="lazy"></div>
+<figcaption>Ground docking</figcaption></figure>
+        <span class="expand-icon"><i class="fa fa-expand" aria-hidden="true"></i></span>
+      </a>
+      <p class="figure-caption">Aerial sensing supports vision-guided ground docking in Tensegrity-Blocks.</p>
+      <div class="selected-heading">
+<h3>Selected publications</h3>
+<a href="{{ site.baseurl }}/research/publications/#planning" data-publications="planning">View publications <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+</div>
+      <ul class="selected-papers">
+<li data-paper-id="flowmo2026">
+<a href="https://arxiv.org/abs/2606.13817" target="_blank" rel="noopener">FlowMo-WM <i class="fa fa-external-link" aria-hidden="true"></i></a><span>Preprint / Under review, 2026</span>
+</li>
+<li data-paper-id="9341312">
+<a href="https://ieeexplore.ieee.org/abstract/document/9341312" target="_blank" rel="noopener">PLRC* <i class="fa fa-external-link" aria-hidden="true"></i></a><span>IROS, 2020</span>
+</li>
+</ul>
+    </section>
 
-    <div class="project-item" onclick="toggleDetails(this)">
-      <div class="project-image-container">
-        <img src="{{ site.baseurl }}/assets/img/teasers/m-word.png" alt="Aquatic Modular Soft Robots">
-        <div class="overlay-text">
-          <h4>Aquatic Modular Soft Robots</h4>
-        </div>
-      </div>
-      <div class="project-details">
-        <div>
-          <strong>Related Papers:</strong>
-          <ul>
-            <li><a href="{{ site.baseurl }}/assets/documents/papers/SoftRaft.pdf" target="_blank">SoftRafts: Floating and Adaptive Soft Modular Robots</a></li>
-          </ul>
-        </div>
-        <div>
-          <strong>Related Videos:</strong>
-          <ul>
-            <li><a href="https://www.youtube.com/watch?v=L9Rf5gL8sXc" target="_blank">SoftRafts Video</a></li>
-          </ul>
-        </div>
-        <div>
-          <strong>Related Code & Hardware:</strong>
-          <ul>
-            <li><a href="https://github.com/luyangzhao/SoftRafts" target="_blank">SoftRafts Repository</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
 
-    <div class="project-item" onclick="toggleDetails(this)">
-      <div class="project-image-container">
-        <img src="{{ site.baseurl }}/assets/img/teasers/learning.png" alt="Learning-Based Robot Design">
-        <div class="overlay-text">
-          <h4>Learning-Based Robot Design and Control</h4>
-        </div>
-      </div>
-      <div class="project-details">
-        <div>
-          <strong>Related Papers:</strong>
-          <ul>
-            <li><a href="{{ site.baseurl }}/assets/documents/papers/learning.pdf" target="_blank">On the Exploration of LM-Based Soft Modular Robot Design</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
 
-    <div class="project-item" onclick="toggleDetails(this)">
-      <div class="project-image-container">
-        <img src="{{ site.baseurl }}/assets/img/teasers/proj4.png" alt="Memory-Efficient Motion Planning">
-        <div class="overlay-text">
-          <h4>Memory-Efficient Motion Planning</h4>
-        </div>
-      </div>
-      <div class="project-details">
-        <div>
-          <strong>Related Papers:</strong>
-          <ul>
-            <li><a href="{{ site.baseurl }}/assets/documents/papers/plrc.pdf" target="_blank">PLRC*: A Piecewise Linear Regression Complex for Approximating Optimal Robot Motion</a></li>
-            <li><a href="{{ site.baseurl }}/assets/documents/papers/lldm.pdf" target="_blank">LLDM: Locally Linear Distance Maps for Robot Motion Planning</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
 
-  </div>
+
+
+<aside class="related-research" id="other-research" aria-labelledby="related-research-title">
+  <div class="area-heading">
+<span class="number">06</span><h3 id="related-research-title">Other Research</h3>
+</div>
+  <a href="{{ site.baseurl }}/research/publications/#related" data-publications="related">View publications <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+</aside>
+<dialog class="research-dialog" aria-labelledby="dialog-title">
+    <header class="dialog-header"><h2 id="dialog-title"></h2>
+<button type="button" class="dialog-close" aria-label="Close research details" title="Close"><i class="fa fa-times" aria-hidden="true"></i></button></header>
+    <div class="dialog-body"></div>
+  </dialog><template id="planning-method-detail">
+    <figure class="method-detail"><img src="{{ site.baseurl }}/assets/img/research/proj4.png" alt="PLRC robot motion through polygonal obstacles and locally linear motion representations"><figcaption>Motion-planning foundations: PLRC* and locally linear motion representations.</figcaption></figure>
+  </template><template id="research-detail-physical"><p>Softness, modularity, and tensegrity create robot bodies that can move, manipulate, change shape, and work together.</p>
+<figure class="research-figure">
+        <div class="detail-figure"><img src="{{ site.baseurl }}/assets/img/research/physical-statement.png" alt="Research statement montage of Tensegrity Blocks, modular grippers, SoftRafts, StarBlocks, SoftSnap, the dolphin robot, and morphing-wing aircraft" width="2200" height="1093" loading="lazy"></div>
+        <figcaption>Physical robot platforms and demonstrations: locomotion, manipulation, load transport, floating structures, and morphing bodies. Shelter fabric was human-placed.</figcaption>
+      </figure></template><template id="research-detail-computational"><p>Physics-based modeling and learning-assisted inverse design connect desired shapes and behaviors to realizable robot configurations.</p>
+<figure class="research-figure">
+        <div class="detail-figure"><img src="{{ site.baseurl }}/assets/img/research/computational-statement.png" alt="Forward modeling and learning-assisted inverse design with inchworm, caterpillar, snake, and brittle-star target curves and physical SoftSnap robots" width="2200" height="1038" loading="lazy"></div>
+        <figcaption>Physics-based prediction, learned inverse design, and biological shape targets. Computed configurations and physical demonstrations provide distinct evidence.</figcaption>
+      </figure></template><template id="research-detail-generative"><p>Task-conditioned generation and simulation feedback guide the design of modular robot bodies, toward a design-build-test loop.</p>
+<figure class="research-figure">
+        <div class="detail-figure"><img src="{{ site.baseurl }}/assets/img/research/ai-statement.png" alt="Full proposed generative design framework linking module, environment, and task specifications to AI generation, simulation, physical testing, and model calibration" width="2200" height="574" loading="lazy"></div>
+        <figcaption>Proposed design and physical-feedback loop. The simulated configuration and manually designed physical prototype are prior calibration examples.</figcaption>
+      </figure></template><template id="research-detail-planning"><p>We study world models for policy learning, alongside perception and efficient motion planning for autonomous robot behavior.</p>
+<figure class="research-figure">
+        <div class="detail-figure"><img src="{{ site.baseurl }}/assets/img/research/autonomy-statement.png" alt="Modular body designs, simulation and physical testbeds, and a perception-to-planning-to-ground-docking pipeline" width="2200" height="714" loading="lazy"></div>
+        <figcaption>Platforms, modeling testbeds, and vision-guided ground docking. The rotorcraft camera used for the ground-docking demonstration was manually positioned.</figcaption>
+      </figure></template>{% for area in site.data.research.areas %}
+<template id="publications-{{ area.id }}" data-publication-template="{{ area.id }}" data-title="{{ area.title | escape }}">
+  {% include research-publications.html area=area %}
+</template>
+{% endfor %}
 </section>
-
-<script>
-  window.toggleDetails = function (element) {
-    var projectItem = element.closest('.project-item');
-    var details = projectItem.querySelector('.project-details');
-    if (details.style.maxHeight) {
-      details.style.maxHeight = null;
-    } else {
-      details.style.maxHeight = details.scrollHeight + 'px';
-    }
-  };
-</script>
+<script src="{{ site.baseurl }}/assets/js/research.js?v=20261120" defer></script>

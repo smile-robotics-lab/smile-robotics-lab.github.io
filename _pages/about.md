@@ -1,5 +1,6 @@
 ---
 layout: default
+research: true
 permalink: /
 ---
 
