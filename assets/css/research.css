@@ -281,42 +281,6 @@ html { scroll-padding-top: 0; }
 .research-section .research-area { scroll-margin-top: 88px; }
 .research-section .research-area:last-of-type { border-bottom: 0; }
 body:has(.research-section dialog[open]) { overflow: hidden; }
-@media (min-width: 1440px) {
-  .wrapper { width: calc(100% - 96px); max-width: 2560px; padding-left: 32px; padding-right: 32px; }
-  .smile-hero .right picture { max-width: 720px; }
-  .lab-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-  .lab-member img, .member-avatar-placeholder { max-width: 220px; }
-  .lab-member strong { max-width: 240px; }
-  .lab-photo-carousel { max-width: 1440px; aspect-ratio: 12 / 5; max-height: none; margin-left: auto; margin-right: auto; }
-  .research-section .image-cell { height: 220px; }
-  .research-section .computational-strip .image-cell img { max-height: 190px; }
-  .research-section .autonomy-strip .image-cell img { max-height: 200px; }
-  .research-section .aerial-scenes, .research-section .vla-story-visual { height: 360px; }
-  .research-section .vla-viewport { max-width: 320px; margin-left: auto; margin-right: auto; }
-}
-@media (min-width: 1800px) {
-  .research-section .research-area:has(> .area-publications) {
-    display: grid;
-    grid-template-columns: minmax(0, 2.1fr) minmax(320px, 1fr);
-    column-gap: 56px;
-    align-items: start;
-  }
-  .research-section .research-area > .area-heading,
-  .research-section .research-area > .description { grid-column: 1 / -1; }
-  .research-section .research-area > .visual-strip,
-  .research-section .research-area > .design-framework { grid-column: 1; grid-row: 3; }
-  .research-section .research-area > .figure-caption { grid-column: 1; grid-row: 4; }
-  .research-section .area-publications { grid-column: 2; grid-row: 3 / 5; min-width: 0; }
-  .research-section .area-publications .selected-heading { margin-top: 0; }
-  .research-section .area-publications .selected-papers { margin-top: 8px; }
-  .research-section .area-publications .selected-papers li { flex-direction: column; gap: 3px; padding: 10px 0; border-bottom: 1px solid var(--line); }
-  .research-section .area-publications .selected-papers li > span { flex-shrink: 1; }
-}
-@media (min-width: 2200px) {
-  .research-section .image-cell { height: 260px; }
-  .research-section .computational-strip .image-cell img,
-  .research-section .autonomy-strip .image-cell img { max-height: 230px; }
-}
 @media (max-width: 900px) {
   .smile-hero { grid-template-columns: minmax(0, 1fr); gap: 28px; }
   .smile-hero .left { max-width: 100%; }
