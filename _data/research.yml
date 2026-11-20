@@ -1,7 +1,7 @@
 ---
 areas:
 - id: physical
-  title: Human-Driven Robot Design
+  title: Human-Driven Physical Robot Design
   groups:
   - title: Robot Platforms & Actuation
     papers:
